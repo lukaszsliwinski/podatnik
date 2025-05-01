@@ -1,0 +1,27 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+export default function Calculation() {
+  const [calc, setCalc] = useState<string>('');
+  
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
+
+  // temporary
+  useEffect(() => {
+    axios
+      .get(apiUrl)
+      .then(res => {
+        setCalc(res.data.calculation);
+      })
+      .catch(err => {
+        // TODO: error snackbar
+        console.error(err);
+      })
+  }, []);
+
+  return (
+    <section className="h-screen flex justify-center items-center bg-red-300" id="calculation">
+      {calc}
+    </section>
+  );
+}''
