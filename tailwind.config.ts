@@ -1,3 +1,6 @@
+// TODO: sprawdzić czy poprawnie zaczytuje wartości
+
+
 import type { Config } from 'tailwindcss';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
@@ -29,8 +32,9 @@ const config: Config = {
       colors: {
         'main-text': '#ffffff',
         'dark-text': '#404040',
-        'dark-bg': '#09090b',
-        'light-bg': '#e5e5e5'
+        'light-bg': '#e5e5e5',
+        'dark-bg': '#020618', // var(--color-yellow-400) jeśli się da
+        'main': '#fdc700'
       }
     }
   },

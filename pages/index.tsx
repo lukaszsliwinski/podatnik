@@ -4,7 +4,7 @@
 import Landing from "./layout/landing";
 import About from "./layout/about";
 import Office from "./layout/office";
-import Calculation from "./layout/calculation";
+import Offer from "./layout/offer";
 import Contact from "./layout/contact";
 
 // Fonts
@@ -32,7 +32,7 @@ export default function Home() {
       <Landing />
       <About />
       <Office />
-      <Calculation />
+      <Offer />
       <Contact />
     </div>
   );

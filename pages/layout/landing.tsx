@@ -1,13 +1,25 @@
 export default function Landing() {
-  const sections = ['home', 'about', 'office', 'calculation', 'contact'];
+  const sections = [
+    ['home', 'biuro rachunkowe podatnik'],
+    ['about', 'o mnie'],
+    ['office', 'biuro'],
+    ['offer', 'oferta'],
+    ['contact', 'kontakt'],
+  ];
   
   return (
     <>
       <nav className="fixed">
-        <ul className="list-none bg-black text-white w-screen py-2 flex justify-center">
-          {sections.map((section) => (
-            <li key={section} className="mx-1">
-              <a href={`#${section}`}>{section}</a>
+        <ul className="list-none bg-slate-900 text-white text-xl uppercase font-light tracking-widest w-screen pl-2 pr-6 flex justify-between">
+          {sections.map((section, idx) => (
+            <li
+              key={section[0]}
+              className={idx === 0 ? 'mr-auto' : ''}
+            >
+              <a
+                href={`#${section[0]}`}
+                className={`inline-block mx-2 px-2 py-4 ${idx === 0 ? 'font-semibold' : 'hover:bg-yellow-500'}`}
+              >{section[1]}</a>
             </li>
           ))}
         </ul>
