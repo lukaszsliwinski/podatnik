@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function Calculation() {
+export default function Offer() {
   const [calc, setCalc] = useState<string>('');
   
   const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
@@ -20,7 +20,7 @@ export default function Calculation() {
   }, []);
 
   return (
-    <section className="h-screen flex justify-center items-center bg-red-300" id="calculation">
+    <section className="h-screen flex justify-center items-center bg-red-300" id="offer">
       {calc}
     </section>
   );
