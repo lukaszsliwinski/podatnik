@@ -8,20 +8,14 @@ import Offer from "./layout/offer";
 import Contact from "./layout/contact";
 
 // Fonts
-
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
 });
-/*
-usage:
-
-*/
-
 
 export default function Home() {
   return (
-    <div className={`${openSans.className} font-[family-name:var(--font-open-sans)] tracking-[4px]`}>
+    <div className={`${openSans.className} font-[family-name:var(--font-open-sans)] tracking-main`}>
       <Landing />
       <About />
       <Office />
