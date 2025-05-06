@@ -9,7 +9,7 @@ export default function Landing() {
   
   return (
     <>
-      <nav className="fixed">
+      <nav className="fixed z-20">
         <ul className="list-none bg-slate-900 text-white uppercase w-screen pl-2 pr-6 flex justify-between">
           {sections.map((section, idx) => (
             <li
@@ -18,14 +18,18 @@ export default function Landing() {
             >
               <a
                 href={`#${section[0]}`}
-                className={`inline-block mx-1 px-3 py-4 ${idx === 0 ? 'font-semibold' : 'hover:bg-yellow-500'}`}
+                className={`inline-block mx-1 px-3 py-4 ${idx === 0 ? 'font-semibold' : 'hover:bg-main'}`}
               >{section[1]}</a>
             </li>
           ))}
         </ul>
       </nav>
-      <section className="h-screen flex justify-center items-center bg-indigo-300" id="home">
-        home page
+      <section className="relative bg-cover bg-center bg-no-repeat bg-[url('../public/landing.webp')]" id="home">
+        
+        <div className="min-h-screen-mobile flex justify-center items-center bg-indigo-300/40">
+          home page
+        </div>
+      
       </section>
     </>
   );
