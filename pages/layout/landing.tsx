@@ -10,7 +10,7 @@ export default function Landing() {
   return (
     <>
       <nav className="fixed">
-        <ul className="list-none bg-slate-900 text-white text-xl uppercase font-light tracking-widest w-screen pl-2 pr-6 flex justify-between">
+        <ul className="list-none bg-slate-900 text-white uppercase w-screen pl-2 pr-6 flex justify-between">
           {sections.map((section, idx) => (
             <li
               key={section[0]}
@@ -18,7 +18,7 @@ export default function Landing() {
             >
               <a
                 href={`#${section[0]}`}
-                className={`inline-block mx-2 px-2 py-4 ${idx === 0 ? 'font-semibold' : 'hover:bg-yellow-500'}`}
+                className={`inline-block mx-1 px-3 py-4 ${idx === 0 ? 'font-semibold' : 'hover:bg-yellow-500'}`}
               >{section[1]}</a>
             </li>
           ))}

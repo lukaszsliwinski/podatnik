@@ -4,6 +4,7 @@ import axios from "axios";
 export default function Offer() {
   const [calc, setCalc] = useState<string>('');
   
+  // TODO: .env nie działa na serwerze
   const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
 
   // temporary
