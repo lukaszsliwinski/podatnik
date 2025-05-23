@@ -3,11 +3,13 @@
   --breakpoint-2xs: 360px;
   --breakpoint-xs: 480px;
 
-  --color-main-text: #ffffff;
-  --color-dark-text: #404040;
-  --color-light-bg: #e5e5e5;
-  --color-dark-bg: #020618;
-  --color-main: var(--color-yellow-600);
+  --color-light-text: #ffffff;
+  --color-mid-text: #6d6a6a;
+  --color-hover-text: #ccc9c9;
+  --color-dark-text: #999696;
+  --color-light-bg: #ffffff;
+  --color-dark-bg: #18353e;
+  --color-main: #d62e4c;
 
   --tracking-main: 4px;
   --spacing-screen-mobile: calc(var(--vh, 1vh) * 100);
@@ -17,4 +19,9 @@
 /* scrollbar */
 html {
   scroll-behavior: smooth;
+}
+
+/* logo container */
+.logo-container {
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
 }
