@@ -7,7 +7,7 @@ import {
   faLocationDot
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import logo from '../../public/logo.svg';
+import logo from '../../public/logo.jpg';
 
 export default function Landing() {
   // State to track if the window is scrolled to the top
@@ -56,9 +56,9 @@ export default function Landing() {
         ${windowTop ? 'top-15' : 'top-0'}
       `}>
         <div className="bg-main text-light-text max-w-4xl h-22 mx-auto shadow-lg flex justify-between items-center">
-          <div className="w-72 p-1 bg-light-bg logo-container flex">
+          <div className="w-72 p-2 bg-light-bg logo-container flex">
             <Image
-              className="w-20"
+              className="w-18"
               src={logo}
               alt="logo"
             />
