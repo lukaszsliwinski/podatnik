@@ -1,28 +1,51 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import {
+  faUsers,
+  faCoins,
+  faBriefcase
+} from '@fortawesome/free-solid-svg-icons';
+
+import List from '../components/list';
+import Pictogram from '../components/pictogram';
+
 
 export default function Offer() {
-  const [calc, setCalc] = useState<string>('');
-  
-  // TODO: .env nie działa na serwerze
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
-
-  // temporary
-  useEffect(() => {
-    axios
-      .get(apiUrl)
-      .then(res => {
-        setCalc(res.data.calculation);
-      })
-      .catch(err => {
-        // TODO: error snackbar
-        console.error(err);
-      })
-  }, []);
-
   return (
-    <section className="h-screen flex justify-center items-center bg-red-300" id="offer">
-      {calc}
+    <section className="flex justify-center items-center bg-light-bg" id="offer">
+      <div className="grid grid-cols-3 gap-20 max-w-6xl my-24">
+        <List
+          header={'USŁUGI KADROWE'}
+          items={[
+            'prowadzenie elektronicznych akt osobowych pracowników',
+            'Przygotowanie dokumentacji pracowniczych : umów o pracę, umów zleceń, umów o dzieło,',
+            'Rozliczanie urlopów, prowadzenie ewidencji zwolnień lekarskich',
+            'Pełna obsługa ZUS'
+          ]}
+        />
+        <Pictogram icon={faUsers}/>
+        <Pictogram icon={faCoins} />
+        <List
+          header={'USŁUGI PŁACOWE'}
+          items={[
+            'naliczanie wynagrodzeń także w walutach obcych',
+            'sporządzanie deklaracji rocznych PIT-11 ; PIT-4R, PIT-8AR;'
+          ]}
+        />
+        <List
+          header={'USŁUGI KSIĘGOWE'}
+          items={[
+            'jednoosobowych działalności gospodarczych: KPIR, ryczałt',
+            'spółek jawnych SP.J.',
+            'spółek cywilnych S.C.',
+            'spółek z ograniczoną odpowiedzialnością sp. z o.o.',
+            'spółek komandytowych sp.kom.',
+            'spółek komandytowo-akcyjnych S.K.A.',
+            'spółek akcyjnych S.A.',
+            'spółek prostych akcyjnych P.S.A.',
+            'fundacji i stowarzyszeń'
+          ]}
+        />
+        <Pictogram icon={faBriefcase}/>
+      </div>
     </section>
   );
 }

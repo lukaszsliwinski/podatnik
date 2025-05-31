@@ -55,7 +55,7 @@ export default function Landing() {
         fixed w-screen z-20 transition-all
         ${windowTop ? 'top-15' : 'top-0'}
       `}>
-        <div className="bg-main text-light-text max-w-4xl h-22 mx-auto shadow-lg flex justify-between items-center">
+        <div className="bg-main text-light-text max-w-4xl text-base font-normal h-22 mx-auto shadow-lg flex justify-between items-center">
           <div className="w-72 p-2 bg-light-bg logo-container flex">
             <Image
               className="w-18"

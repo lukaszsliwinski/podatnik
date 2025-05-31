@@ -40,7 +40,7 @@ export default function Counter({ number, text, animationTime }: ICounter) {
   return (
     <div ref={ref} className="flex flex-col items-center">
       <h2 className="text-6xl font-bold mb-2">{total.toString()}</h2>
-      <p className="text-center text-sm max-w-38">{text}</p>
+      <p className="text-center text-sm font-normal max-w-38">{text}</p>
     </div>
   )
 }
