@@ -10,20 +10,20 @@ import Counter from "../components/counter";
 export default function About() {
   return (
     <section className="flex flex-col justify-center items-center bg-light-bg" id="about">
-      <div className="grid grid-cols-2 gap-20 max-w-6xl my-24">
+      <div className="grid grid-cols-2 gap-20 max-w-6xl mt-24">
         <div className="my-auto">
           <h1 className="mb-4 text-3xl font-semibold">O MNIE</h1>
-          <p className="text-justify font-light">
+          <p className="text-justify font-light text-sm">
             <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </p>
         </div>
         <Image
-          className="w-xl"
+          className="w-xl rounded-xl shadow-xl"
           src={profile}
           alt="profile"
         />
       </div>
-      <div className="flex justify-around h-64 w-screen bg-dark-bg">
+      <div className="flex justify-around h-64 w-[95vw] bg-dark-bg rounded-xl shadow-xl mt-16">
         <div className="w-full flex justify-around items-center px-20">
           <Image
             className="h-28 w-auto"
