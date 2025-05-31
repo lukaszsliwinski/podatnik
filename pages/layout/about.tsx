@@ -10,7 +10,7 @@ import Counter from "../components/counter";
 export default function About() {
   return (
     <section className="flex flex-col justify-center items-center bg-light-bg" id="about">
-      <div className="grid grid-cols-2 gap-20 max-w-6xl mt-24">
+      <div className="grid grid-cols-2 gap-20 my-24 max-w-6xl">
         <div className="my-auto">
           <h2 className="mb-4 text-3xl font-semibold">O MNIE</h2>
           <p className="text-justify font-light text-sm">
@@ -23,7 +23,8 @@ export default function About() {
           alt="profile"
         />
       </div>
-      <div className="flex justify-around h-64 w-[95vw] bg-dark-bg rounded-xl shadow-xl mt-16">
+
+      <div className="flex justify-around h-64 w-[95vw] max-w-7xl bg-dark-bg rounded-xl shadow-xl">
         <div className="w-full flex justify-around items-center px-20">
           <Image
             className="h-28 w-auto"
