@@ -1,4 +1,4 @@
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 // Layout imports
 import Landing from "./layout/landing";
@@ -8,27 +8,14 @@ import Offer from "./layout/offer";
 import Contact from "./layout/contact";
 
 // Fonts
-
-/*
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-usage:
-<div className={`${geistSans.className} ${geistMono.className} font-[family-name:var(--font-geist-sans)]`} >
-
-*/
-
 
 export default function Home() {
   return (
-    <div>
+    <div className={`${openSans.className} font-[family-name:var(--font-open-sans)] tracking-main font-light text-sm/7`}>
       <Landing />
       <About />
       <Office />
