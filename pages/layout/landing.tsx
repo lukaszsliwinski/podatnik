@@ -45,7 +45,7 @@ export default function Landing() {
                 href={`${item[0]}`}
                 className="inline-block hover:text-hover-text"
               >
-                <FontAwesomeIcon icon={item[1]} className="mr-2" size="lg" />
+                <FontAwesomeIcon icon={item[1]} fixedWidth  className="mr-2" size="lg" />
                 {item[2]}</a>
             </li>
           ))}
@@ -77,7 +77,9 @@ export default function Landing() {
         </div>
       </nav>
       <div className="relative bg-cover bg-center bg-no-repeat bg-[url('../public/landing.webp')]" id="home">
-        <div className="min-h-[70vh] flex justify-center items-center bg-neutral-800/80"></div>
+        <div className="min-h-[70vh] flex justify-center items-center bg-neutral-800/80">
+            
+        </div>
       </div>
     </section>
   );
