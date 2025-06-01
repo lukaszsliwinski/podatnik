@@ -26,7 +26,7 @@ export default function Counter({ number, text, animationTime }: ICounter) {
       setAnimated(true);
 
       let counter = 0;
-      let i = setInterval(() => {
+      const i = setInterval(() => {
         setTotal(counter);
         counter++;
         if (counter > number) {
