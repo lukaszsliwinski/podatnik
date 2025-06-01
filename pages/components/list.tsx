@@ -1,4 +1,4 @@
-import { IList } from "../types";
+import { IList } from "../../types/types";
 
 export default function List({ header, items }: IList) {
   return (

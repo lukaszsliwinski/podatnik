@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ICounter } from "../types";
+import { ICounter } from "../../types/types";
 
 export default function Counter({ number, text, animationTime }: ICounter) {
   // State variables
