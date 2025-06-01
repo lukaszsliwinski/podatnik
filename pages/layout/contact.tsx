@@ -18,19 +18,19 @@ export default function Contact() {
   ]
 
   return (
-    <footer className="relative h-96 flex justify-center bg-dark-bg text-light-text text-base/7 font-normal" id="contact">
+    <footer className="relative h-96 flex justify-center bg-dark-bg text-light-text font-normal" id="contact">
       <div className="grid grid-cols-6 w-full max-w-5xl my-20">
         <div className="col-span-3">
           <h4 className="mb-4 text-lg font-medium">KONTAKT:</h4>
           <div>
-            <div className="mb-3">Wieńczysława Śliwińska</div>
+            <div className="mb-3 text-base">Wieńczysława Śliwińska</div>
             {contacts.map((item, idx) => (
               <a
                 key={idx}
                 href={`${item[0]}`}
                 className="block mb-1 hover:text-hover-text"
               >
-                <FontAwesomeIcon icon={item[1]} className="mr-2" />
+                <FontAwesomeIcon icon={item[1]} fixedWidth  className="mr-3" />
                 {item[2]}</a>
             ))}
           </div>
