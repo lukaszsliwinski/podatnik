@@ -16,8 +16,8 @@
 
   --tracking-main: 4px;
   --spacing-screen-mobile: calc(var(--vh, 1vh) * 100);
-
 }
+
 
 /* scrollbar */
 html {
@@ -28,4 +28,10 @@ html {
 /* logo container */
 .logo-container {
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+
+/* landing background gradient */
+.landing-gradient {
+  background: var(--color-light-bg);
+  background: linear-gradient(180deg, rgba(249, 245, 242, .9) 0%, rgba(249, 245, 242, .9) 50%, rgba(249, 245, 242, 1) 100%);
 }
