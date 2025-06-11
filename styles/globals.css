@@ -3,13 +3,16 @@
   --breakpoint-2xs: 360px;
   --breakpoint-xs: 480px;
 
-  --color-light-text: #ffffff;
+  --color-light-text: #f9f5f2;
   --color-mid-text: #6d6a6a;
-  --color-hover-text: #ccc9c9;
-  --color-dark-text: #999696;
-  --color-light-bg: #ffffff;
-  --color-dark-bg: #18353e;
-  --color-main: #d62e4c;
+  --color-dark-text: #343932;
+
+  --color-hover-dark: #bcc9b8;
+  --color-hover-main: #f5e0d5;
+
+  --color-light-bg: #f9f5f2;
+  --color-dark-bg: #616d63;
+  --color-main: #d2ac97;
 
   --tracking-main: 4px;
   --spacing-screen-mobile: calc(var(--vh, 1vh) * 100);

@@ -43,7 +43,7 @@ export default function Landing() {
             <li key={idx}>
               <a
                 href={`${item[0]}`}
-                className="inline-block hover:text-hover-text"
+                className="inline-block hover:text-hover-dark"
               >
                 <FontAwesomeIcon icon={item[1]} fixedWidth  className="mr-2" size="lg" />
                 {item[2]}</a>
@@ -69,7 +69,7 @@ export default function Landing() {
               <li key={idx}>
                 <a
                   href={`#${section[0]}`}
-                  className="inline-block mx-2 px-3 py-4 hover:text-hover-text"
+                  className="inline-block mx-2 px-3 py-4 hover:text-hover-main"
                 >{section[1]}</a>
               </li>
             ))}

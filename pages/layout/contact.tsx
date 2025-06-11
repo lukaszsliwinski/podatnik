@@ -28,7 +28,7 @@ export default function Contact() {
               <a
                 key={idx}
                 href={`${item[0]}`}
-                className="block mb-1 hover:text-hover-text"
+                className="block mb-1 hover:text-hover-dark"
               >
                 <FontAwesomeIcon icon={item[1]} fixedWidth  className="mr-3" />
                 {item[2]}</a>
