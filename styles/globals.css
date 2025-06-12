@@ -3,18 +3,21 @@
   --breakpoint-2xs: 360px;
   --breakpoint-xs: 480px;
 
-  --color-light-text: #ffffff;
+  --color-light-text: #f9f5f2;
   --color-mid-text: #6d6a6a;
-  --color-hover-text: #ccc9c9;
-  --color-dark-text: #999696;
-  --color-light-bg: #ffffff;
-  --color-dark-bg: #18353e;
-  --color-main: #d62e4c;
+  --color-dark-text: #343932;
+
+  --color-hover-dark: #bcc9b8;
+  --color-hover-main: #f5e0d5;
+
+  --color-light-bg: #f9f5f2;
+  --color-dark-bg: #616d63;
+  --color-main: #d2ac97;
 
   --tracking-main: 4px;
   --spacing-screen-mobile: calc(var(--vh, 1vh) * 100);
-
 }
+
 
 /* scrollbar */
 html {
@@ -25,4 +28,10 @@ html {
 /* logo container */
 .logo-container {
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+
+/* landing background gradient */
+.landing-gradient {
+  background: var(--color-light-bg);
+  background: linear-gradient(180deg, rgba(249, 245, 242, .9) 0%, rgba(249, 245, 242, .9) 50%, rgba(249, 245, 242, 1) 100%);
 }
