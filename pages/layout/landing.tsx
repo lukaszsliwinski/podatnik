@@ -7,8 +7,8 @@ import {
   faLocationDot,
   faCheck
 } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
-import logo from '../../public/logo.jpg';
+// import Image from 'next/image';
+// import logo from '../../public/logo.jpg';
 
 export default function Landing() {
   // State to track if the window is scrolled to the top
@@ -85,15 +85,17 @@ export default function Landing() {
       </nav>
       <div className="relative bg-cover bg-center bg-no-repeat bg-[url('../public/landing.webp')]" id="home">
         <div className="min-h-[70vh] flex flex-col justify-center items-center landing-gradient text-xl text-mid-text">
-          {phrases.map((phrase, idx) => (
-            <h2
-              key={idx}
-              className="mt-12"
-            >
-              <FontAwesomeIcon icon={faCheck} fixedWidth  className="mr-3 text-lime-600" size="lg" />
-              {phrase}
-            </h2>
-          ))}
+          <div>
+            {phrases.map((phrase, idx) => (
+              <h2
+                key={idx}
+                className="mt-12"
+              >
+                <FontAwesomeIcon icon={faCheck} fixedWidth  className="mr-3 text-main" size="lg" />
+                {phrase}
+              </h2>
+            ))}
+          </div>
           <a href="#offer" className="mt-16 bg-main text-light-text hover:rounded-xl shadow-lg px-8 py-3 transition-all">oferta</a>
         </div>
       </div>
