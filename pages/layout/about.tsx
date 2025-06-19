@@ -26,16 +26,20 @@ export default function About() {
 
       <div className="flex justify-around h-64 w-[95vw] max-w-7xl bg-dark-bg rounded-xl shadow-xl">
         <div className="w-full flex justify-around items-center px-20">
-          <Image
-            className="h-28 w-auto"
-            src={kibr}
-            alt="kibr"
-          />
-          <Image
-            className="h-28 w-auto"
-            src={orly}
-            alt="orly"
-          />
+          <a href="https://www.kibr.pl/" target="_blank" rel="noopener noreferrer">
+            <Image
+              className="h-28 w-auto"
+              src={kibr}
+              alt="kibr"
+            />
+          </a>
+          <a href="https://orlyrachunkowosci.pl/" target="_blank" rel="noopener noreferrer">
+            <Image
+              className="h-28 w-auto"
+              src={orly}
+              alt="orly"
+            />
+          </a>
         </div>
         <div className="w-px bg-light-bg my-8"></div>
         <div className="w-full flex justify-around items-center px-20 text-light-text">
