@@ -48,9 +48,9 @@ export default function Contact() {
         <div className="col-span-1">
           <h4 className="mb-4 text-lg font-medium">USŁUGI:</h4>
           <ul className="list-disc">
-            <li className="ml-6">kadry</li>
-            <li className="ml-6">płace</li>
             <li className="ml-6">księgowość</li>
+            <li className="ml-6">płace</li>
+            <li className="ml-6">kadry</li>
           </ul>
         </div>
       </div>

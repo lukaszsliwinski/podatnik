@@ -13,24 +13,6 @@ export default function Offer() {
     <section className="flex justify-center items-center bg-light-bg" id="offer">
       <div className="grid grid-cols-4 gap-20 max-w-5xl my-24">
         <List
-          header={'USŁUGI KADROWE'}
-          items={[
-            'prowadzenie elektronicznych akt osobowych pracowników',
-            'Przygotowanie dokumentacji pracowniczych : umów o pracę, umów zleceń, umów o dzieło,',
-            'Rozliczanie urlopów, prowadzenie ewidencji zwolnień lekarskich',
-            'Pełna obsługa ZUS'
-          ]}
-        />
-        <Pictogram icon={faUsers}/>
-        <Pictogram icon={faCoins} />
-        <List
-          header={'USŁUGI PŁACOWE'}
-          items={[
-            'naliczanie wynagrodzeń także w walutach obcych',
-            'sporządzanie deklaracji rocznych PIT-11 ; PIT-4R, PIT-8AR;'
-          ]}
-        />
-        <List
           header={'USŁUGI KSIĘGOWE'}
           items={[
             'jednoosobowych działalności gospodarczych: KPIR, ryczałt',
@@ -45,6 +27,24 @@ export default function Offer() {
           ]}
         />
         <Pictogram icon={faBriefcase}/>
+        <Pictogram icon={faCoins} />
+        <List
+          header={'USŁUGI PŁACOWE'}
+          items={[
+            'naliczanie wynagrodzeń także w walutach obcych',
+            'sporządzanie deklaracji rocznych PIT-11 ; PIT-4R, PIT-8AR;'
+          ]}
+        />
+        <List
+          header={'USŁUGI KADROWE'}
+          items={[
+            'prowadzenie elektronicznych akt osobowych pracowników',
+            'Przygotowanie dokumentacji pracowniczych : umów o pracę, umów zleceń, umów o dzieło,',
+            'Rozliczanie urlopów, prowadzenie ewidencji zwolnień lekarskich',
+            'Pełna obsługa ZUS'
+          ]}
+        />
+        <Pictogram icon={faUsers}/>
       </div>
     </section>
   );
