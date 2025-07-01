@@ -6,6 +6,7 @@ import About from "./layout/about";
 import Office from "./layout/office";
 import Offer from "./layout/offer";
 import Contact from "./layout/contact";
+import Rodo from "./layout/rodo";
 
 // Fonts
 const openSans = Open_Sans({
@@ -15,11 +16,12 @@ const openSans = Open_Sans({
 
 export default function Home() {
   return (
-    <div className={`${openSans.className} text-dark-text font-[family-name:var(--font-open-sans)] tracking-main font-light text-sm/7`}>
+    <div className={`${openSans.className} bg-light-bg text-dark-text font-[family-name:var(--font-open-sans)] tracking-main font-light text-sm/7`}>
       <Landing />
       <About />
       <Office />
       <Offer />
+      <Rodo />
       <Contact />
     </div>
   );

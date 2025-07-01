@@ -10,7 +10,7 @@ import Pictogram from '../components/pictogram';
 
 export default function Offer() {
   return (
-    <section className="flex justify-center items-center bg-light-bg" id="offer">
+    <section className="flex justify-center items-center" id="offer">
       <div className="grid grid-cols-4 gap-20 max-w-5xl my-24">
         <List
           header={'USŁUGI KSIĘGOWE'}

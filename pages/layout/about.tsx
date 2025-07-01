@@ -9,7 +9,7 @@ import Counter from "../components/counter";
 
 export default function About() {
   return (
-    <section className="flex flex-col justify-center items-center bg-light-bg" id="about">
+    <section className="flex flex-col justify-center items-center" id="about">
       <div className="grid grid-cols-2 gap-20 my-24 max-w-6xl">
         <div className="my-auto">
           <h2 className="mb-4 text-3xl font-semibold">O MNIE</h2>

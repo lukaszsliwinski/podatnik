@@ -24,6 +24,7 @@ export default function Landing() {
     ['about', 'O mnie'],
     ['office', 'Biuro'],
     ['offer', 'Oferta'],
+    ['rodo', 'Rodo'],
     ['contact', 'Kontakt'],
   ];
 

@@ -12,7 +12,7 @@ export default function Office() {
   const [activePhotoIdx, setActivePhotoIdx] = useState<number>(images.length-1);
 
   return (
-    <section className="flex flex-col justify-center items-center bg-light-bg" id="office">
+    <section className="flex flex-col justify-center items-center" id="office">
       <div className="grid grid-cols-3 gap-20 max-w-6xl my-24">
         
         <div
