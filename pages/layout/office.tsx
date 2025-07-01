@@ -50,7 +50,7 @@ export default function Office() {
         </div>
       </div>
       
-      <div className="flex justify-around h-96 w-[95vw] max-w-7xl bg-dark-bg rounded-xl shadow-xl">
+      <div className="flex justify-around h-96 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
         <div className="w-full flex justify-center items-center scroll-mt-24" id="adres">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2549.037176696586!2d18.945484376953587!3d50.29123389881446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d27094acb749%3A0x62b31822dc0b905b!2sBiuro%20Rachunkowe%20Podatnik%20Wie%C5%84czys%C5%82awa%20%C5%9Aliwi%C5%84ska!5e0!3m2!1spl!2spl!4v1748707893270!5m2!1spl!2spl"

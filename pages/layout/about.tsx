@@ -24,7 +24,7 @@ export default function About() {
         />
       </div>
 
-      <div className="flex justify-around h-64 w-[95vw] max-w-7xl bg-dark-bg rounded-xl shadow-xl">
+      <div className="flex justify-around h-64 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
         <div className="w-full flex justify-around items-center px-20">
           <a href="https://www.kibr.pl/" target="_blank" rel="noopener noreferrer">
             <Image
