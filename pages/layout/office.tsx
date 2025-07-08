@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation, easeOut } from "framer-motion";
 import Image from "next/image";
 
 const images = [
@@ -9,15 +10,60 @@ const images = [
 ];
 
 export default function Office() {
-  const [activePhotoIdx, setActivePhotoIdx] = useState<number>(images.length-1);
+  const [activePhotoIdx, setActivePhotoIdx] = useState<number>(images.length - 1);
+
+  const ref = useRef(null);
+
+  // animation controls
+  const textControls = useAnimation();
+  const galleryControls = useAnimation();
+
+  // motion variants
+  const textVariants = {
+    hidden: { opacity: 0, x: 150 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: easeOut },
+    },
+  };
+
+  const galleryVariants = {
+    hidden: { opacity: 0, x: -150 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: easeOut },
+    },
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          textControls.start("visible");
+          galleryControls.start("visible");
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, [textControls, galleryControls]);
 
   return (
     <section className="flex flex-col justify-center items-center" id="office">
-      <div className="grid grid-cols-3 gap-20 max-w-6xl my-24">
-        
-        <div
+      <div ref={ref} className="grid grid-cols-3 gap-20 max-w-6xl my-24">
+        <motion.div
           className="flex col-span-2 max-w-3xl w-full overflow-hidden mx-auto rounded-xl"
           onMouseLeave={() => setActivePhotoIdx(activePhotoIdx)}
+          initial="hidden"
+          animate={galleryControls}
+          variants={galleryVariants}
         >
           {images.slice().reverse().map((image, idx) => (
             <div
@@ -35,21 +81,24 @@ export default function Office() {
                 fill
                 className="object-cover pointer-events-none"
               />
-              <div
-                className="absolute inset-0 transition-all duration-500 ease-in-out"
-              ></div>
+              <div className="absolute inset-0 transition-all duration-500 ease-in-out"></div>
             </div>
           ))}
-        </div>
-        
-        <div className="my-auto">
+        </motion.div>
+
+        <motion.div
+          className="my-auto"
+          initial="hidden"
+          animate={textControls}
+          variants={textVariants}
+        >
           <h2 className="mb-4 text-3xl font-semibold">BIURO</h2>
           <p className="text-justify font-light">
             <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
-        </div>
+        </motion.div>
       </div>
-      
+
       <div className="flex justify-around h-96 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
         <div className="w-full flex justify-center items-center scroll-mt-24" id="adres">
           <iframe
@@ -64,7 +113,7 @@ export default function Office() {
         </div>
         <div className="w-px bg-light-bg my-8"></div>
         <div className="w-4/5 h-48 flex flex-col justify-around pl-18 my-auto text-light-text">
-          <p>  
+          <p>
             ul. Dąbrowskiego 58/6<br />
             41-500 Chorzów
           </p>
@@ -74,7 +123,6 @@ export default function Office() {
           </p>
         </div>
       </div>
-      
     </section>
   );
 }
