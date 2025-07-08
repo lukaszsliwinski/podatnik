@@ -16,7 +16,7 @@ const openSans = Open_Sans({
 
 export default function Home() {
   return (
-    <div className={`${openSans.className} bg-light-bg text-dark-text font-[family-name:var(--font-open-sans)] tracking-main font-light text-sm/7`}>
+    <div className={`${openSans.className} bg-light-bg text-dark-text font-[family-name:var(--font-open-sans)] tracking-main font-light text-sm/6`}>
       <Landing />
       <About />
       <Office />
