@@ -18,10 +18,12 @@ export default function Home() {
   return (
     <div className={`${openSans.className} bg-light-bg text-dark-text font-[family-name:var(--font-open-sans)] tracking-main font-light text-sm/6`}>
       <Landing />
-      <About />
-      <Office />
-      <Offer />
-      <Rodo />
+      <main className="px-4 lg:px-0">
+        <About />
+        <Office />
+        <Offer />
+        <Rodo />
+      </main>
       <Contact />
     </div>
   );

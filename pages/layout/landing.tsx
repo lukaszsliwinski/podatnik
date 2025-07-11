@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, useAnimation, easeInOut, easeIn } from "framer-motion";
+import { motion, useAnimation, easeInOut } from "framer-motion";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -29,7 +29,7 @@ export default function Landing() {
   ];
 
   const phrases = [
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting',
     'Contrary to popular belief, Lorem Ipsum is not simply random text',
     'There are many variations of passages of Lorem Ipsum available'
   ]
@@ -152,10 +152,12 @@ export default function Landing() {
           ${windowTop ? 'top-15' : 'top-0'}
         `}
       >
-        <div className="bg-main text-light-text max-w-4xl text-base font-normal h-22 mx-auto shadow-lg flex justify-between items-center">
-          <div className="w-52 h-22 p-2 bg-light-bg logo-container flex">
-            <div className="text-mid-text/70 my-auto ml-4">Biuro Rachunkowe Podatnik</div>
+        <div className="bg-main text-light-text lg:max-w-4xl text-base font-normal h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
+          
+          <div className="w-full lg:w-52 p-1 lg:p-2 bg-light-bg logo-container flex">
+            <div className="text-mid-text lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">Biuro Rachunkowe Podatnik</div>
           </div>
+          
           <ul className="list-none pr-6 flex">
             {sections.map((section, idx) => (
               <li key={idx}>
@@ -166,6 +168,7 @@ export default function Landing() {
               </li>
             ))}
           </ul>
+        
         </div>
       </motion.nav>
       <motion.div

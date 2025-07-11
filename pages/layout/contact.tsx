@@ -19,7 +19,7 @@ export default function Contact() {
 
   return (
     <footer className="relative h-96 flex justify-center bg-dark-bg text-light-text font-normal" id="contact">
-      <div className="grid grid-cols-6 w-full max-w-5xl my-20">
+      <div className="grid grid-cols-6 w-full max-w-5xl my-20 mx-10">
         <div className="col-span-3">
           <h4 className="mb-4 text-lg font-medium">KONTAKT:</h4>
           <div>
