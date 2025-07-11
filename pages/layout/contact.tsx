@@ -18,9 +18,9 @@ export default function Contact() {
   ]
 
   return (
-    <footer className="relative h-96 flex justify-center bg-dark-bg text-light-text font-normal" id="contact">
-      <div className="grid grid-cols-6 w-full max-w-5xl my-20 mx-10">
-        <div className="col-span-3">
+    <footer className="relative md:h-96 flex justify-center bg-dark-bg text-light-text font-normal" id="contact">
+      <div className="grid md:grid-cols-6 gap-y-9 md:gap-2 w-full max-w-5xl mb-20 mt-10 md:mt-20 mx-10">
+        <div className="md:col-span-4 lg:col-span-3">
           <h4 className="mb-4 text-lg font-medium">KONTAKT:</h4>
           <div>
             <div className="mb-3 text-base">Wieńczysława Śliwińska</div>
@@ -35,7 +35,7 @@ export default function Contact() {
             ))}
           </div>
         </div>
-        <div className="col-span-2">
+        <div className="xs:ml-auto md:ml-0 md:col-span-2">
           <h4 className="mb-4 text-lg font-medium">BIURO CZYNNE:</h4>
           <p>
             <span className="inline-block w-16">pn:</span>14:00 - 20:00<br />
@@ -45,7 +45,7 @@ export default function Contact() {
             <span className="inline-block w-16">pt:</span>&ensp;9:00 - 20:00<br />
           </p>
         </div>
-        <div className="col-span-1">
+        <div className="hidden lg:block col-span-1">
           <h4 className="mb-4 text-lg font-medium">USŁUGI:</h4>
           <ul className="list-disc">
             <li className="ml-6">księgowość</li>
@@ -55,7 +55,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="absolute bottom-4 flex justify-center w-full select-none">
-        <p className="text-xs">&copy; {years} BIURO RACHUNKOWE PODATNIK CHORZÓW</p>
+        <p className="text-xs">&copy; {years} <span className="hidden sm:inline">BIURO RACHUNKOWE</span> PODATNIK CHORZÓW</p>
       </div>
     </footer>
   );

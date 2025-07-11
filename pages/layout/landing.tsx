@@ -21,11 +21,11 @@ export default function Landing() {
   ]
 
   const sections = [
-    ['about', 'O mnie'],
-    ['office', 'Biuro'],
-    ['offer', 'Oferta'],
-    ['rodo', 'Rodo'],
-    ['contact', 'Kontakt'],
+    ['about', 'O mnie', ''],
+    ['office', 'Biuro', ''],
+    ['offer', 'Oferta', ''],
+    ['rodo', 'Rodo', 'mobile-hidden'],
+    ['contact', 'Kontakt', ''],
   ];
 
   const phrases = [
@@ -126,7 +126,7 @@ export default function Landing() {
     <section className="w-screen" id="home">
       <div className="h-26 bg-dark-bg">
         <motion.ul
-          className="list-none text-light-text text-sm font-light tracking-normal max-w-3xl h-15 mx-auto flex justify-between items-center"
+          className="list-none text-light-text text-xs md:text-sm font-light tracking-normal max-w-52 sm:max-w-3xl h-15 mx-auto sm:mr-4 flex justify-around items-center"
           initial="hidden"
           animate={contactControls}
           variants={contactVariants}
@@ -137,8 +137,9 @@ export default function Landing() {
                 href={`${item[0]}`}
                 className="inline-block hover:text-hover-text"
               >
-                <FontAwesomeIcon icon={item[1]} fixedWidth  className="mr-2" size="lg" />
-                {item[2]}</a>
+                <FontAwesomeIcon icon={item[1]} fixedWidth  className="sm:mr-2 scale-150 sm:scale-100" size="lg" />
+                <span className="hidden sm:inline-block">{item[2]}</span>
+              </a>
             </li>
           ))}
         </motion.ul>
@@ -152,18 +153,18 @@ export default function Landing() {
           ${windowTop ? 'top-15' : 'top-0'}
         `}
       >
-        <div className="bg-main text-light-text lg:max-w-4xl text-base font-normal h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
+        <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
           
           <div className="w-full lg:w-52 p-1 lg:p-2 bg-light-bg logo-container flex">
             <div className="text-mid-text lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">Biuro Rachunkowe Podatnik</div>
           </div>
           
-          <ul className="list-none pr-6 flex">
+          <ul className="list-none pr-2 sm:pr-6 flex">
             {sections.map((section, idx) => (
               <li key={idx}>
                 <a
                   href={`#${section[0]}`}
-                  className="inline-block mx-2 px-3 py-4 hover:text-hover-text"
+                  className={`${section[2] === 'mobile-hidden' ? 'hidden xs:inline-block' : 'inline-block'} mx-2 sm:mx-5 my-4 hover:text-hover-text`}
                 >{section[1]}</a>
               </li>
             ))}
@@ -178,7 +179,7 @@ export default function Landing() {
         animate={backgroundControls}
         variants={backgroundVariants}
       >
-        <div className="min-h-[70vh] flex flex-col justify-center items-center landing-gradient text-xl text-mid-text">
+        <div className="min-h-[70vh] flex flex-col justify-center items-center landing-gradient text-base lg:text-xl text-mid-text px-8">
           <motion.div
             initial="hidden"
             animate={phrasesControls}
@@ -187,7 +188,7 @@ export default function Landing() {
             {phrases.map((phrase, idx) => (
               <motion.h2
                 key={idx}
-                className="mt-12"
+                className="flex items-center mt-12"
                 variants={phrasesVariants}
               >
                 <FontAwesomeIcon icon={faCheck} fixedWidth  className="mr-3 text-main" size="lg" />

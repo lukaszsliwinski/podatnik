@@ -57,9 +57,9 @@ export default function Office() {
 
   return (
     <section className="flex flex-col justify-center items-center" id="office">
-      <div ref={ref} className="grid xl:grid-cols-3 gap-y-6 xl:gap-20 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl my-24">
+      <div ref={ref} className="grid xl:grid-cols-3 md:gap-y-4 xl:gap-20 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mt-12 sm:my-16 md:my-24">
         <motion.div
-          className="order-2 xl:order-1 flex col-span-2 max-w-3xl w-full overflow-hidden mx-auto rounded-xl"
+          className="order-2 xl:order-1 flex col-span-2 max-w-3xl w-full overflow-hidden mx-auto -my-10 sm:my-0 rounded-xl scale-y-60 sm:scale-y-70 md:scale-y-85 lg:scale-y-100"
           onMouseLeave={() => setActivePhotoIdx(activePhotoIdx)}
           initial="hidden"
           animate={galleryControls}
@@ -99,9 +99,10 @@ export default function Office() {
         </motion.div>
       </div>
 
-      <div className="flex justify-around h-96 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
-        <div className="px-10 w-full flex justify-center items-center scroll-mt-24" id="adres">
+      <div className="flex justify-around h-68 xs:h-96 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
+        <div className="md:px-10 w-80 xs:w-sm sm:w-md lg:w-full flex justify-center items-center scroll-mt-24" id="adres">
           <iframe
+            className="-mx-6 xs:mx-0 scale-75 xs:scale-100"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2549.037176696586!2d18.945484376953587!3d50.29123389881446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d27094acb749%3A0x62b31822dc0b905b!2sBiuro%20Rachunkowe%20Podatnik%20Wie%C5%84czys%C5%82awa%20%C5%9Aliwi%C5%84ska!5e0!3m2!1spl!2spl!4v1748707893270!5m2!1spl!2spl"
             width="550"
             height="300"
@@ -111,8 +112,8 @@ export default function Office() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="w-px bg-light-bg my-8"></div>
-        <div className="w-4/5 h-48 flex flex-col justify-around pl-18 my-auto text-light-text">
+        <div className="hidden md:block w-px bg-light-bg my-8"></div>
+        <div className="hidden md:flex w-4/5 h-48 flex-col justify-around pl-10 lg:pl-18 my-auto text-light-text">
           <p>
             ul. Dąbrowskiego 58/6<br />
             41-500 Chorzów
