@@ -1,10 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { motion, useAnimation, easeOut } from 'framer-motion';
-import {
-  faUsers,
-  faCoins,
-  faBriefcase
-} from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faCoins, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 import List from '../components/list';
 import Pictogram from '../components/pictogram';
@@ -97,7 +93,6 @@ export default function Offer() {
       if (ref3.current) observer3.unobserve(ref3.current);
     };
   }, [list3Controls, picto3Controls]);
-
 
   return (
     <section className="flex justify-center items-center" id="offer">

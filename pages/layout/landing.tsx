@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, useAnimation, easeInOut } from "framer-motion";
+import { motion, useAnimation, easeInOut } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -14,26 +14,25 @@ export default function Landing() {
   // State to track if the window is scrolled to the top
   const [windowTop, setWindowTop] = useState(true);
 
-  const contacts: [string, IconDefinition, string][]  = [
+  const contacts: [string, IconDefinition, string][] = [
     ['#adres', faLocationDot, 'Dąbrowskiego 58/6, Chorzów'],
     ['tel:664781030', faPhone, '+48 664 781 030'],
     ['mailto:podatnik@domain.pl', faEnvelope, 'podatnik@domain.pl']
-  ]
+  ];
 
   const sections = [
     ['about', 'O mnie', ''],
     ['office', 'Biuro', ''],
     ['offer', 'Oferta', ''],
     ['rodo', 'Rodo', 'mobile-hidden'],
-    ['contact', 'Kontakt', ''],
+    ['contact', 'Kontakt', '']
   ];
 
   const phrases = [
     'Lorem Ipsum is simply dummy text of the printing and typesetting',
     'Contrary to popular belief, Lorem Ipsum is not simply random text',
     'There are many variations of passages of Lorem Ipsum available'
-  ]
-
+  ];
 
   // animation controls
   const backgroundControls = useAnimation();
@@ -49,7 +48,7 @@ export default function Landing() {
       opacity: 1,
       transition: { duration: 1.5 }
     }
-  }
+  };
 
   const contactVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +56,7 @@ export default function Landing() {
       opacity: 1,
       transition: { duration: 0, delay: 0.2 }
     }
-  }
+  };
 
   const navVariants = {
     hidden: { y: -150 },
@@ -67,16 +66,16 @@ export default function Landing() {
         duration: 0.4
       }
     }
-  }
+  };
 
   const phrasesContainerVariants = {
     visible: {
       transition: {
         staggerChildren: 0.55,
-        delayChildren: 0.1,
-      },
+        delayChildren: 0.1
+      }
     }
-  }
+  };
 
   const phrasesVariants = {
     hidden: { x: -2000 },
@@ -93,9 +92,9 @@ export default function Landing() {
       scale: 1,
       transition: {
         duration: 0.2,
-        ease: easeInOut,
-      },
-    },
+        ease: easeInOut
+      }
+    }
   };
 
   // Animation queue
@@ -105,13 +104,10 @@ export default function Landing() {
       contactControls.start('visible');
 
       await navControls.start('visible');
-      await phrasesControls.start("visible");
-      await buttonControls.start("visible");
+      await phrasesControls.start('visible');
+      await buttonControls.start('visible');
     })();
   }, []);
-
-
-
 
   // Effect to handle window scroll event
   useEffect(() => {
@@ -121,23 +117,25 @@ export default function Landing() {
     // Cleanup the event listener on component unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, [windowTop]);
-  
+
   return (
     <section className="w-screen" id="home">
       <div className="h-26 bg-dark-bg">
         <motion.ul
-          className="list-none text-light-text text-xs md:text-sm font-light tracking-normal max-w-52 sm:max-w-3xl h-15 mx-auto sm:mr-4 flex justify-around items-center"
+          className="list-none text-light-text text-xs md:text-sm font-light tracking-normal max-w-52 sm:max-w-3xl h-15 mx-auto sm:pr-4 flex justify-around items-center"
           initial="hidden"
           animate={contactControls}
           variants={contactVariants}
         >
           {contacts.map((item, idx) => (
             <li key={idx}>
-              <a
-                href={`${item[0]}`}
-                className="inline-block hover:text-hover-text"
-              >
-                <FontAwesomeIcon icon={item[1]} fixedWidth  className="sm:mr-2 scale-150 sm:scale-100" size="lg" />
+              <a href={`${item[0]}`} className="inline-block hover:text-hover-text">
+                <FontAwesomeIcon
+                  icon={item[1]}
+                  fixedWidth
+                  className="sm:mr-2 scale-150 sm:scale-100"
+                  size="lg"
+                />
                 <span className="hidden sm:inline-block">{item[2]}</span>
               </a>
             </li>
@@ -154,22 +152,24 @@ export default function Landing() {
         `}
       >
         <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
-          
           <div className="w-full lg:w-52 p-1 lg:p-2 bg-light-bg logo-container flex">
-            <div className="text-mid-text lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">Biuro Rachunkowe Podatnik</div>
+            <div className="text-mid-text lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
+              Biuro Rachunkowe Podatnik
+            </div>
           </div>
-          
+
           <ul className="list-none pr-2 sm:pr-6 flex">
             {sections.map((section, idx) => (
               <li key={idx}>
                 <a
                   href={`#${section[0]}`}
                   className={`${section[2] === 'mobile-hidden' ? 'hidden xs:inline-block' : 'inline-block'} mx-2 sm:mx-5 my-4 hover:text-hover-text`}
-                >{section[1]}</a>
+                >
+                  {section[1]}
+                </a>
               </li>
             ))}
           </ul>
-        
         </div>
       </motion.nav>
       <motion.div
@@ -186,12 +186,8 @@ export default function Landing() {
             variants={phrasesContainerVariants}
           >
             {phrases.map((phrase, idx) => (
-              <motion.h2
-                key={idx}
-                className="flex items-center mt-12"
-                variants={phrasesVariants}
-              >
-                <FontAwesomeIcon icon={faCheck} fixedWidth  className="mr-3 text-main" size="lg" />
+              <motion.h2 key={idx} className="flex items-center mt-12" variants={phrasesVariants}>
+                <FontAwesomeIcon icon={faCheck} fixedWidth className="mr-3 text-main" size="lg" />
                 {phrase}
               </motion.h2>
             ))}
@@ -202,7 +198,9 @@ export default function Landing() {
             initial="hidden"
             animate={buttonControls}
             variants={buttonVariants}
-          >oferta</motion.a>
+          >
+            oferta
+          </motion.a>
         </div>
       </motion.div>
     </section>
