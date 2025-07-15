@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 export interface ICounter {
   number: number;
   text: string;
@@ -12,4 +14,8 @@ export interface IList {
 export interface IButton {
   label: string;
   href: string;
+}
+
+export interface IPictogram {
+  icon: IconDefinition;
 }

@@ -2,11 +2,11 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, easeOut } from 'framer-motion';
 import Image from 'next/image';
 
-import profile from '../../public/profile.jpg';
-import kibr from '../../public/kibr.jpg';
-import orly from '../../public/orly.png';
+import profile from '@/public/profile.jpg';
+import kibr from '@/public/kibr.jpg';
+import orly from '@/public/orly.png';
 
-import Counter from '../components/counter';
+import Counter from '../components/Counter';
 
 export default function About() {
   const ref = useRef(null);

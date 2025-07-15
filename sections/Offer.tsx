@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, easeOut } from 'framer-motion';
 import { faUsers, faCoins, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
-import List from '../components/list';
-import Pictogram from '../components/pictogram';
+import List from '@/components/List';
+import Pictogram from '@/components/Pictogram';
 
 export default function Offer() {
   const ref1 = useRef(null);

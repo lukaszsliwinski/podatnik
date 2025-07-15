@@ -1,12 +1,12 @@
 import { Open_Sans } from 'next/font/google';
 
 // Layout imports
-import Landing from './layout/landing';
-import About from './layout/about';
-import Office from './layout/office';
-import Offer from './layout/offer';
-import Contact from './layout/contact';
-import Rodo from './layout/rodo';
+import Landing from '@/sections/Landing';
+import About from '@/sections/About';
+import Office from '@/sections/Office';
+import Offer from '@/sections/Offer';
+import Contact from '@/sections/Contact';
+import Rodo from '@/sections/Rodo';
 
 // Fonts
 const openSans = Open_Sans({
