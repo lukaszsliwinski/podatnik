@@ -6,7 +6,7 @@ import profile from '@/public/profile.jpg';
 import kibr from '@/public/kibr.jpg';
 import orly from '@/public/orly.png';
 
-import Counter from '../components/Counter';
+import Counter from '@/components/Counter';
 
 export default function About() {
   const ref = useRef(null);
@@ -42,7 +42,7 @@ export default function About() {
           imageControls.start('visible');
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.4 }
     );
 
     if (ref.current) observer.observe(ref.current);
