@@ -1,23 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @theme {
-  --breakpoint-2xs: 360px;
-  --breakpoint-xs: 480px;
+  /* --breakpoint-2xs: 360px; */
+  --breakpoint-xs: 420px;
 
-  --color-light-text: #f9f5f2;
-  --color-mid-text: #6d6a6a;
-  --color-dark-text: #343932;
+  --color-light-text: #fefefe;
+  --color-mid-text: #666;
+  --color-dark-text: #333;
+  --color-hover-text: #fefefeaa;
 
-  --color-hover-dark: #bcc9b8;
-  --color-hover-main: #f5e0d5;
+  --color-light-bg: #fefefe;
+  --color-dark-bg: #666;
+  --color-main-bg: #1abc9c;
 
-  --color-light-bg: #f9f5f2;
-  --color-dark-bg: #616d63;
-  --color-main: #d2ac97;
+  --color-main: #f1c40f;
 
   --tracking-main: 4px;
   --spacing-screen-mobile: calc(var(--vh, 1vh) * 100);
 }
-
 
 /* scrollbar */
 html {
@@ -26,12 +25,19 @@ html {
 }
 
 /* logo container */
-.logo-container {
-  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+@media screen and (min-width: 1024px) {
+  .logo-container {
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  }
 }
 
 /* landing background gradient */
 .landing-gradient {
   background: var(--color-light-bg);
-  background: linear-gradient(180deg, rgba(249, 245, 242, .9) 0%, rgba(249, 245, 242, .9) 50%, rgba(249, 245, 242, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 254, 0.9) 0%,
+    rgba(254, 254, 254, 0.9) 50%,
+    rgba(254, 254, 254, 1) 100%
+  );
 }
