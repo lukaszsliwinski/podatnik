@@ -59,10 +59,26 @@ export default function Office() {
     <section className="flex flex-col justify-center items-center" id="office">
       <div
         ref={ref}
-        className="grid xl:grid-cols-3 md:gap-y-4 xl:gap-20 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mt-12 sm:my-16 md:my-24"
+        className="lg:max-w-4xl mt-12 sm:my-16 md:my-24"
       >
         <motion.div
-          className="order-2 xl:order-1 flex col-span-2 max-w-3xl w-full overflow-hidden mx-auto -my-10 sm:my-0 rounded-xl scale-y-60 sm:scale-y-70 md:scale-y-85 lg:scale-y-100"
+          className="col-span-2 order-1 xl:order-2 my-auto"
+          initial="hidden"
+          animate={textControls}
+          variants={textVariants}
+        >
+          <h2 className="mb-4 text-3xl font-semibold">BIURO</h2>
+          <p className="text-justify font-light">
+            Oferuję kompleksową obsługę księgową dla firm z różnych branż. Prowadzę <span className="font-semibold">księgi rachunkowe, podatkową księgę przychodów i rozchodów, ryczałt od przychodów ewidencjonowanych</span>, a także pełną <span className="font-semibold">obsługę kadr i płac</span> oraz <span className="font-semibold">rozliczeń podatkowych i ZUS</span> — wszystko w pełnej zgodności z obowiązującymi przepisami.
+            <br /><br />
+            W codziennej pracy stawiam na <span className="font-semibold">indywidualne podejście, terminowość i rzetelność</span>. Dbam o <span className="font-semibold">skrupulatność, poufność danych i przejrzystą komunikację</span> — zawiłe przepisy przekładam na proste i praktyczne rozwiązania, tak aby ułatwiać przedsiębiorcom pewne i świadome prowadzenie biznesu.
+            <br /><br />
+            Obsługuję firmy m.in. z branży: <span className="font-semibold">budowlanej, samochodowej, medycznej, paramedycznej, IT, architektonicznej, projektowej, handlowej, finansowej, ubezpieczeniowej, sportowej, beauty oraz motoryzacyjnej.</span>
+            <br /><br />
+          </p>
+        </motion.div>
+        <motion.div
+          className="flex col-span-3 max-w-4xl w-full overflow-hidden mx-auto -my-10 sm:my-0 rounded-xl scale-y-60 sm:scale-y-70 md:scale-y-85 lg:scale-y-100"
           onMouseLeave={() => setActivePhotoIdx(activePhotoIdx)}
           initial="hidden"
           animate={galleryControls}
@@ -90,22 +106,6 @@ export default function Office() {
                 <div className="absolute inset-0 transition-all duration-500 ease-in-out"></div>
               </div>
             ))}
-        </motion.div>
-
-        <motion.div
-          className="order-1 xl:order-2 my-auto"
-          initial="hidden"
-          animate={textControls}
-          variants={textVariants}
-        >
-          <h2 className="mb-4 text-3xl font-semibold">BIURO</h2>
-          <p className="text-justify font-light">
-            <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.
-          </p>
         </motion.div>
       </div>
 

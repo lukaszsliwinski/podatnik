@@ -29,9 +29,8 @@ export default function Landing() {
   ];
 
   const phrases = [
-    'Lorem Ipsum is simply dummy text of the printing and typesetting',
-    'Contrary to popular belief, Lorem Ipsum is not simply random text',
-    'There are many variations of passages of Lorem Ipsum available'
+    'Wsparcie rozwoju, a nie tylko rozliczenia - księgowość, to coś więcej niż liczby',
+    'Partnerska współpraca, która daje pewność, spokój i przestrzeń do działania'
   ];
 
   // animation controls
@@ -152,7 +151,7 @@ export default function Landing() {
         `}
       >
         <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
-          <div className="w-full lg:w-52 p-1 lg:p-2 bg-light-bg logo-container flex">
+          <div className="w-full lg:w-46 p-1 lg:p-2 bg-light-bg logo-container flex">
             <div className="text-mid-text lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
               Biuro Rachunkowe Podatnik
             </div>
@@ -179,7 +178,7 @@ export default function Landing() {
         animate={backgroundControls}
         variants={backgroundVariants}
       >
-        <div className="min-h-[70vh] flex flex-col justify-center items-center landing-gradient text-base lg:text-xl text-mid-text px-8">
+        <div className="min-h-[55vh] flex flex-col justify-center items-center landing-gradient text-base lg:text-xl text-mid-text px-8 mt-20">
           <motion.div
             initial="hidden"
             animate={phrasesControls}

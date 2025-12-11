@@ -56,7 +56,7 @@ export default function About() {
     <section className="flex flex-col justify-center items-center" id="about">
       <div
         ref={ref}
-        className="grid lg:grid-cols-2 sm:gap-y-8 lg:gap-20 mt-12 sm:my-16 md:my-24 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
+        className="grid lg:grid-cols-2 sm:gap-y-8 mt-12 sm:my-16 md:my-24 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
       >
         <motion.div
           className="my-auto"
@@ -66,19 +66,17 @@ export default function About() {
         >
           <h2 className="mb-4 text-3xl font-semibold">O MNIE</h2>
           <p className="text-justify font-light">
-            <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Nazywam się <span className="font-semibold">Wieńczysława Śliwińska</span> i od wielu lat specjalizuję się w kompleksowej obsłudze księgowej firm - niezależnie od ich branży czy formy działalności. Posiadam <span className="font-semibold">certyfikat księgowy Ministerstwa Finansów</span> (nr 43037/2010), dyplom Akademii Ekonomicznej w Katowicach oraz ponad 20 lat doświadczenia na stanowisku Głównej Księgowej. Jestem członkiem założycielem <span className="font-semibold">Krajowej Izby Biur Rachunkowych</span> oraz członkiem <span className="font-semibold">Stowarzyszenia Księgowych w Polsce</span>, oddział w Katowicach. Regularnie poszerzam wiedzę, uczestnicząc w specjalistycznych szkoleniach i na bieżąco śledząc zmiany w przepisach.
+            <br /><br />
+            Od ponad 15 lat prowadzę <span className="font-semibold">Biuro Rachunkowe „Podatnik”</span> w Chorzowie, gdzie z pełnym zaangażowaniem wspieram przedsiębiorców w bezpiecznym, zgodnym z przepisami i efektywnym prowadzeniu ich finansów. Księgowość to dla mnie nie tylko zawód, ale także pasja i realny sposób, by pomagać firmom rosnąć, podejmować świadome decyzje i działać spokojnie w dynamicznie zmieniającym się otoczeniu prawnym. Moim priorytetem jest odciążenie klientów z obowiązków księgowych, aby mogli skupić się na tym, co najważniejsze — rozwoju swojej działalności.
+            <br /><br />
+            Zapraszam do współpracy firmy poszukujące solidnego wsparcia księgowego opartego na profesjonalizmie i zaangażowaniu.
           </p>
         </motion.div>
 
         <motion.div initial="hidden" animate={imageControls} variants={imageVariants}>
           <Image
-            className="rounded-xl shadow-xl mx-auto scale-80 lg:scale-100"
+            className="rounded-xl shadow-xl mx-auto scale-80"
             src={profile}
             alt="profile"
           />
