@@ -110,12 +110,12 @@ export default function Offer() {
               'jednoosobowych działalności gospodarczych: KPIR, ryczałt',
               'spółek jawnych SP.J.',
               'spółek cywilnych S.C.',
-              'spółek z ograniczoną odpowiedzialnością sp. z o.o.',
+              'spółek z&nbsp;ograniczoną odpowiedzialnością sp. z o.o.',
               'spółek komandytowych sp.kom.',
               'spółek komandytowo-akcyjnych S.K.A.',
               'spółek akcyjnych S.A.',
               'spółek prostych akcyjnych P.S.A.',
-              'fundacji i stowarzyszeń'
+              'fundacji i&nbsp;stowarzyszeń'
             ]}
           />
         </motion.div>
@@ -146,8 +146,8 @@ export default function Offer() {
           <List
             header={'USŁUGI PŁACOWE'}
             items={[
-              'naliczanie wynagrodzeń także w walutach obcych',
-              'sporządzanie deklaracji rocznych PIT-11 ; PIT-4R, PIT-8AR;'
+              'naliczanie wynagrodzeń także w&nbsp;walutach obcych',
+              'sporządzanie deklaracji rocznych PIT-11, PIT-4R, PIT-8AR'
             ]}
           />
         </motion.div>
@@ -163,7 +163,7 @@ export default function Offer() {
             header={'USŁUGI KADROWE'}
             items={[
               'prowadzenie elektronicznych akt osobowych pracowników',
-              'Przygotowanie dokumentacji pracowniczych : umów o pracę, umów zleceń, umów o dzieło,',
+              'Przygotowanie dokumentacji pracowniczych: umów o&nbsp;pracę, umów zleceń, umów o&nbsp;dzieło,',
               'Rozliczanie urlopów, prowadzenie ewidencji zwolnień lekarskich',
               'Pełna obsługa ZUS'
             ]}

@@ -69,11 +69,11 @@ export default function Office() {
         >
           <h2 className="mb-4 text-3xl font-semibold">BIURO</h2>
           <p className="text-justify font-light">
-            Oferuję kompleksową obsługę księgową dla firm z różnych branż. Prowadzę <span className="font-semibold">księgi rachunkowe, podatkową księgę przychodów i rozchodów, ryczałt od przychodów ewidencjonowanych</span>, a także pełną <span className="font-semibold">obsługę kadr i płac</span> oraz <span className="font-semibold">rozliczeń podatkowych i ZUS</span> — wszystko w pełnej zgodności z obowiązującymi przepisami.
+            Oferuję kompleksową obsługę księgową dla firm z&nbsp;różnych branż. Prowadzę <span className="font-semibold">księgi rachunkowe, podatkową księgę przychodów i&nbsp;rozchodów, ryczałt od przychodów ewidencjonowanych</span>, a&nbsp;także pełną <span className="font-semibold">obsługę kadr i&nbsp;płac</span> oraz <span className="font-semibold">rozliczeń podatkowych i&nbsp;ZUS</span> — wszystko w&nbsp;pełnej zgodności z&nbsp;obowiązującymi przepisami.
             <br /><br />
-            W codziennej pracy stawiam na <span className="font-semibold">indywidualne podejście, terminowość i rzetelność</span>. Dbam o <span className="font-semibold">skrupulatność, poufność danych i przejrzystą komunikację</span> — zawiłe przepisy przekładam na proste i praktyczne rozwiązania, tak aby ułatwiać przedsiębiorcom pewne i świadome prowadzenie biznesu.
+            W codziennej pracy stawiam na <span className="font-semibold">indywidualne podejście, terminowość i&nbsp;rzetelność</span>. Dbam o <span className="font-semibold">skrupulatność, poufność danych i&nbsp;przejrzystą komunikację</span> — zawiłe przepisy przekładam na proste i&nbsp;praktyczne rozwiązania, tak aby ułatwiać przedsiębiorcom pewne i&nbsp;świadome prowadzenie biznesu.
             <br /><br />
-            Obsługuję firmy m.in. z branży: <span className="font-semibold">budowlanej, samochodowej, medycznej, paramedycznej, IT, architektonicznej, projektowej, handlowej, finansowej, ubezpieczeniowej, sportowej, beauty oraz motoryzacyjnej.</span>
+            Obsługuję firmy m.in. z&nbsp;branży: <span className="font-semibold">budowlanej, samochodowej, medycznej, paramedycznej, IT, architektonicznej, projektowej, handlowej, finansowej, ubezpieczeniowej, sportowej, beauty oraz motoryzacyjnej.</span>
             <br /><br />
           </p>
         </motion.div>
