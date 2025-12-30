@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, easeOut } from 'framer-motion';
 import Image from 'next/image';
 
-import profile from '@/public/profile.jpg';
+import certificate1 from '@/public/certificate1.jpg';
+import certificate2 from '@/public/certificate2.jpg';
 import kibr from '@/public/kibr.jpg';
 import orly from '@/public/orly.png';
 
@@ -13,7 +14,8 @@ export default function About() {
 
   // animation controls
   const textControls = useAnimation();
-  const imageControls = useAnimation();
+  const cert1Controls = useAnimation();
+  const cert2Controls = useAnimation();
 
   // motion variants
   const textVariants = {
@@ -25,11 +27,20 @@ export default function About() {
     }
   };
 
-  const imageVariants = {
+  const cert1Variants = {
     hidden: { opacity: 0, x: 150 },
     visible: {
       opacity: 1,
       x: 0,
+      transition: { duration: 0.8, ease: easeOut }
+    }
+  };
+
+  const cert2Variants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
       transition: { duration: 0.8, ease: easeOut }
     }
   };
@@ -39,7 +50,8 @@ export default function About() {
       ([entry]) => {
         if (entry.isIntersecting) {
           textControls.start('visible');
-          imageControls.start('visible');
+          cert1Controls.start('visible');
+          cert2Controls.start('visible');
         }
       },
       { threshold: 0.4 }
@@ -50,7 +62,7 @@ export default function About() {
     return () => {
       if (ref.current) observer.unobserve(ref.current);
     };
-  }, [textControls, imageControls]);
+  }, [textControls, cert1Controls, cert2Controls]);
 
   return (
     <section className="flex flex-col justify-center items-center" id="about">
@@ -74,11 +86,19 @@ export default function About() {
           </p>
         </motion.div>
 
-        <motion.div initial="hidden" animate={imageControls} variants={imageVariants}>
+        <motion.div className="flex items-center max-w-xl lg:max-w-sm mx-auto max-lg:px-2 max-lg:py-4" initial="hidden" animate={cert1Controls} variants={cert1Variants}>
           <Image
-            className="rounded-xl shadow-xl mx-auto scale-80"
-            src={profile}
-            alt="profile"
+            className="shadow"
+            src={certificate1}
+            alt="certificate 1"
+          />
+        </motion.div>
+
+        <motion.div className="lg:col-span-2 max-w-xl mx-auto max-lg:px-2 max-lg:pb-4" initial="hidden" animate={cert2Controls} variants={cert2Variants}>
+          <Image
+            className="shadow"
+            src={certificate2}
+            alt="certificate 2"
           />
         </motion.div>
       </div>
