@@ -13,7 +13,7 @@ export default function Contact() {
   // TODO: wszystkie stałe do osobnego pliku
   const contacts: [string, IconDefinition, string][] = [
     ['tel:664781030', faPhone, '+48 664 781 030'],
-    ['mailto:podatnik@domain.pl', faEnvelope, 'podatnik@domain.pl'],
+    ['mailto:br_podatnik@interia.pl', faEnvelope, 'br_podatnik@interia.pl'],
     ['#adres', faLocationDot, 'Dąbrowskiego 58/6, Chorzów']
   ];
 

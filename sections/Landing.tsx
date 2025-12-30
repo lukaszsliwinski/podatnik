@@ -17,7 +17,7 @@ export default function Landing() {
   const contacts: [string, IconDefinition, string][] = [
     ['#adres', faLocationDot, 'Dąbrowskiego 58/6, Chorzów'],
     ['tel:664781030', faPhone, '+48 664 781 030'],
-    ['mailto:podatnik@domain.pl', faEnvelope, 'podatnik@domain.pl']
+    ['mailto:br_podatnik@interia.pl', faEnvelope, 'br_podatnik@interia.pl']
   ];
 
   const sections = [
