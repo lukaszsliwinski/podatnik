@@ -19,7 +19,7 @@ export default function Home() {
       className={`${inter.className} bg-light-bg text-mid-text font-[family-name:var(--font-inter)] tracking-wider leading-6.5 font-light max-sm:text-xs/5`}
     >
       <Landing />
-      <main className="w-screen px-3 xs:px-6 md:px-12 lg:px-0">
+      <main className="w-screen overflow-x-hidden px-3 xs:px-6 md:px-12 lg:px-0">
         <About />
         <Office />
         <Offer />
