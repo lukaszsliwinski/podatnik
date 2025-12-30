@@ -1,3 +1,5 @@
+import Header from "@/components/Header";
+
 export default function Rodo() {
   const rodoList = [
     `Administratorem Pana/Pani danych osobowych jest <span class="font-semibold">Biuro Rachunkowe ,,Podatnik'' Wieńczysława Śliwińska</span> z&nbsp;siedzibą w&nbsp;Chorzowie, ul.&nbsp;Dąbrowskiego&nbsp;58/6.`,
@@ -14,7 +16,7 @@ export default function Rodo() {
   return (
     <section className="bg-light-bg py-12" id="rodo">
       <div className="mx-auto py-4 sm:py-8 xl:py-10 px-6 sm:px-10 xl:px-20 max-w-7xl bg-main-bg text-light-text rounded-xl shadow-xl">
-        <h2 className="mb-4 text-xl sm:text-2xl lg:text-3xl font-semibold">RODO - obowiązek informacyjny</h2>
+        <Header text="RODO - obowiązek informacyjny" />
         <div className="font-light">
           Informujemy, że:
           <ul className="list-inside space-y-1 mt-2">
