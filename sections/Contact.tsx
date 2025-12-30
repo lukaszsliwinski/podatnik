@@ -22,10 +22,10 @@ export default function Contact() {
       className="relative md:h-96 flex justify-center bg-dark-bg text-light-text font-normal"
       id="contact"
     >
-      <div className="grid md:grid-cols-6 gap-y-9 md:gap-2 w-full max-w-5xl mb-20 mt-10 md:mt-20 mx-10">
-        <div className="md:col-span-4 lg:col-span-3">
+      <div className="grid sm:grid-cols-6 gap-y-9 md:gap-2 w-full max-w-5xl mb-20 mt-10 md:mt-20 mx-10">
+        <div className="max-sm:mx-auto max-sm:flex max-sm:flex-col max-sm:items-center sm:col-span-4 lg:col-span-3">
           <h4 className="mb-4 text-lg font-medium">KONTAKT:</h4>
-          <div>
+          <div className="max-sm:min-w-54 max-sm:text-center">
             <div className="mb-3 text-base">Wieńczysława Śliwińska</div>
             {contacts.map((item, idx) => (
               <a key={idx} href={`${item[0]}`} className="block mb-1 hover:text-hover-text">
@@ -35,9 +35,9 @@ export default function Contact() {
             ))}
           </div>
         </div>
-        <div className="xs:ml-auto md:ml-0 md:col-span-2">
+        <div className="max-sm:mx-auto max-sm:flex max-sm:flex-col max-sm:items-center sm:col-span-2">
           <h4 className="mb-4 text-lg font-medium">BIURO CZYNNE:</h4>
-          <p>
+          <p className="max-sm:min-w-38">
             <span className="inline-block w-16">pn:</span>14:00 - 20:00
             <br />
             <span className="inline-block w-16">wt:</span>14:00 - 20:00
