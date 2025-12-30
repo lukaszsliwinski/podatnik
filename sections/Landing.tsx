@@ -152,7 +152,7 @@ export default function Landing() {
       >
         <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
           <div className="w-full lg:w-46 p-1 lg:p-2 bg-light-bg logo-container flex">
-            <div className="text-mid-text lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
+            <div className="text-mid-text tracking-[0.2em] max-lg:text-[15px] max-lg:font-semibold lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
               Biuro Rachunkowe Podatnik
             </div>
           </div>

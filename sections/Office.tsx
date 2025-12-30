@@ -67,7 +67,7 @@ export default function Office() {
           animate={textControls}
           variants={textVariants}
         >
-          <h2 className="mb-4 text-3xl font-semibold">BIURO</h2>
+          <h2 className="mb-4 text-xl sm:text-2xl lg:text-3xl font-semibold">BIURO</h2>
           <p className="text-justify font-light">
             Oferuję kompleksową obsługę księgową dla firm z&nbsp;różnych branż. Prowadzę <span className="font-semibold">księgi rachunkowe, podatkową księgę przychodów i&nbsp;rozchodów, ryczałt od przychodów ewidencjonowanych</span>, a&nbsp;także pełną <span className="font-semibold">obsługę kadr i&nbsp;płac</span> oraz <span className="font-semibold">rozliczeń podatkowych i&nbsp;ZUS</span> — wszystko w&nbsp;pełnej zgodności z&nbsp;obowiązującymi przepisami.
             <br /><br />
