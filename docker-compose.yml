@@ -14,6 +14,10 @@ services:
       - "traefik.http.routers.podatnik.entrypoints=websecure"
       - "traefik.http.routers.podatnik.tls.certresolver=le"
       - "traefik.http.services.podatnik.loadbalancer.server.port=${PORT}"
+      - "traefik.http.middlewares.podatnik-hsts.headers.stsSeconds=31536000"
+      - "traefik.http.middlewares.podatnik-hsts.headers.stsIncludeSubdomains=true"
+      - "traefik.http.middlewares.podatnik-hsts.headers.stsPreload=true"
+      - "traefik.http.routers.podatnik.middlewares=podatnik-hsts@docker"
     networks:
       - web
     expose:
