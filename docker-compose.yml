@@ -1,0 +1,28 @@
+services:
+  podatnik:
+    build: .
+    container_name: podatnik
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.podatnik.rule=Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`)"
+      - "traefik.http.routers.podatnik.entrypoints=websecure"
+      - "traefik.http.routers.podatnik.tls.certresolver=le"
+      - "traefik.http.services.podatnik.loadbalancer.server.port=${PORT}"
+      - "traefik.http.middlewares.podatnik-hsts.headers.stsSeconds=31536000"
+      - "traefik.http.middlewares.podatnik-hsts.headers.stsIncludeSubdomains=true"
+      - "traefik.http.middlewares.podatnik-hsts.headers.stsPreload=true"
+      - "traefik.http.routers.podatnik.middlewares=podatnik-hsts@docker"
+    networks:
+      - web
+    expose:
+      - "${PORT}"
+
+networks:
+  web:
+    external: true
