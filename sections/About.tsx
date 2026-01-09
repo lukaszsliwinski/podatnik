@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, easeOut } from 'framer-motion';
 import Image from 'next/image';
 
-import certificate1 from '@/public/certificate1.jpg';
-import certificate2 from '@/public/certificate2.jpg';
+import cert1 from '@/public/cert1.jpg';
+import cert2 from '@/public/cert2.jpg';
 import kibr from '@/public/kibr.jpg';
 import orly from '@/public/orly.png';
 
@@ -90,16 +90,16 @@ export default function About() {
         <motion.div className="flex items-center max-w-xl lg:max-w-sm mx-auto max-lg:px-2 max-lg:py-4" initial="hidden" animate={cert1Controls} variants={cert1Variants}>
           <Image
             className="shadow"
-            src={certificate1}
-            alt="certificate 1"
+            src={cert1}
+            alt="cert 1"
           />
         </motion.div>
 
         <motion.div className="lg:col-span-2 max-w-xl mx-auto max-lg:px-2 max-lg:pb-4" initial="hidden" animate={cert2Controls} variants={cert2Variants}>
           <Image
             className="shadow"
-            src={certificate2}
-            alt="certificate 2"
+            src={cert2}
+            alt="cert 2"
           />
         </motion.div>
       </div>
