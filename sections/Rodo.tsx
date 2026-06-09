@@ -14,8 +14,8 @@ export default function Rodo() {
   ];
 
   return (
-    <section className="bg-light-bg py-12" id="rodo">
-      <div className="mx-auto py-4 sm:py-8 xl:py-10 px-6 sm:px-10 xl:px-20 max-w-7xl bg-main-bg text-light-text rounded-xl shadow-xl">
+    <section className="flex bg-light-bg py-12 -mx-6" id="rodo">
+      <div className="mx-auto py-4 sm:py-8 xl:py-10 px-6 sm:px-10 xl:px-20 w-[95vw] max-w-7xl bg-main-bg text-light-text rounded-xl shadow-xl">
         <Header text="RODO - obowiązek informacyjny" />
         <div className="font-light">
           Informujemy, że:

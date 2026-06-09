@@ -107,15 +107,10 @@ export default function Offer() {
           <List
             header={'USŁUGI KSIĘGOWE'}
             items={[
-              'jednoosobowych działalności gospodarczych: KPIR, ryczałt',
-              'spółek jawnych SP.J.',
-              'spółek cywilnych S.C.',
-              'spółek z&nbsp;ograniczoną odpowiedzialnością sp. z o.o.',
-              'spółek komandytowych sp.kom.',
-              'spółek komandytowo-akcyjnych S.K.A.',
-              'spółek akcyjnych S.A.',
-              'spółek prostych akcyjnych P.S.A.',
-              'fundacji i&nbsp;stowarzyszeń'
+              'Jednoosobowe działalności gospodarczych: KPiR, ryczałt, karta podatkowa',
+              'Spółki cywilne',
+              'Spółki prawa handlowego: Sp.\u00A0z\u00A0o.o., S.A',
+              'Fundacje i\u00A0Stowarzyszenia'
             ]}
           />
         </motion.div>
@@ -146,8 +141,9 @@ export default function Offer() {
           <List
             header={'USŁUGI PŁACOWE'}
             items={[
-              'naliczanie wynagrodzeń także w&nbsp;walutach obcych',
-              'sporządzanie deklaracji rocznych PIT-11, PIT-4R, PIT-8AR'
+              'Sporządzanie rocznych rozliczeń: PIT-36, PIT-37, PIT-38, PIT-39',
+              'Sporządzanie rocznych rozliczeń przychodów zagranicznych w\u00A0Polsce: Niemcy, Holandia',
+              'Sporządzanie sprawozdań finansowych'
             ]}
           />
         </motion.div>
@@ -162,10 +158,10 @@ export default function Offer() {
           <List
             header={'USŁUGI KADROWE'}
             items={[
-              'prowadzenie elektronicznych akt osobowych pracowników',
-              'Przygotowanie dokumentacji pracowniczych: umów o&nbsp;pracę, umów zleceń, umów o&nbsp;dzieło,',
-              'Rozliczanie urlopów, prowadzenie ewidencji zwolnień lekarskich',
-              'Pełna obsługa ZUS'
+              'Pełna obsługa kadr i\u00A0płac',
+              'Pełna obsługa ZUS',
+              'Pomoc w\u00A0założeniu działalności gospodarczej',
+              'Pomoc w\u00A0sporządzeniu wniosków o dotację na rozpoczęcie działalności gospodarczej'
             ]}
           />
         </motion.div>

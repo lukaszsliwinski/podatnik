@@ -38,7 +38,8 @@ export default function Landing() {
   const contactControls = useAnimation();
   const navControls = useAnimation();
   const phrasesControls = useAnimation();
-  const buttonControls = useAnimation();
+  const button1Controls = useAnimation();
+  const button2Controls = useAnimation();
 
   // motion variants
   const backgroundVariants = {
@@ -71,7 +72,7 @@ export default function Landing() {
     visible: {
       transition: {
         staggerChildren: 0.55,
-        delayChildren: 0.1
+        delayChildren: 0.05
       }
     }
   };
@@ -104,7 +105,8 @@ export default function Landing() {
 
       await navControls.start('visible');
       await phrasesControls.start('visible');
-      await buttonControls.start('visible');
+      await button1Controls.start('visible');
+      await button2Controls.start('visible');
     })();
   }, []);
 
@@ -150,7 +152,7 @@ export default function Landing() {
           ${windowTop ? 'top-15' : 'top-0'}
         `}
       >
-        <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
+        <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-24 lg:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
           <div className="w-full lg:w-46 p-1 lg:p-2 bg-light-bg logo-container flex">
             <div className="text-mid-text tracking-[0.2em] max-lg:text-[15px] max-lg:font-semibold lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
               Biuro Rachunkowe Podatnik
@@ -162,7 +164,7 @@ export default function Landing() {
               <li key={idx}>
                 <a
                   href={`#${section[0]}`}
-                  className={`${section[2] === 'mobile-hidden' ? 'hidden xs:inline-block' : 'inline-block'} mx-2 sm:mx-5 my-4 hover:text-hover-text`}
+                  className={`${section[2] === 'mobile-hidden' ? 'hidden xs:inline-block' : 'inline-block'} mx-2 sm:mx-5 my-4 hover:text-hover-text text-lg sm:text-xl`}
                 >
                   {section[1]}
                 </a>
@@ -191,15 +193,26 @@ export default function Landing() {
               </motion.h2>
             ))}
           </motion.div>
-          <motion.a
-            href="#offer"
-            className="mt-16 bg-main text-light-text hover:rounded-xl shadow-lg px-8 py-3 transition-all"
-            initial="hidden"
-            animate={buttonControls}
-            variants={buttonVariants}
-          >
-            oferta
-          </motion.a>
+          <div className="flex">
+            <motion.a
+              href="#about"
+              className="mt-16 mx-2 bg-main text-light-text hover:rounded-xl shadow-lg px-6 py-3 transition-all"
+              initial="hidden"
+              animate={button1Controls}
+              variants={buttonVariants}
+            >
+              o mnie
+            </motion.a>
+            <motion.a
+              href="#offer"
+              className="mt-16 mx-2 bg-main text-light-text hover:rounded-xl shadow-lg px-6 py-3 transition-all"
+              initial="hidden"
+              animate={button2Controls}
+              variants={buttonVariants}
+            >
+              oferta
+            </motion.a>
+          </div>
         </div>
       </motion.div>
     </section>
