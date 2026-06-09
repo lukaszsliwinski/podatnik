@@ -38,15 +38,13 @@ export default function Contact() {
         <div className="max-sm:mx-auto max-sm:flex max-sm:flex-col max-sm:items-center sm:col-span-2">
           <h4 className="mb-4 text-lg font-medium">BIURO CZYNNE:</h4>
           <p className="max-sm:min-w-38">
-            <span className="inline-block w-16">pn:</span>14:00 - 20:00
-            <br />
             <span className="inline-block w-16">wt:</span>14:00 - 20:00
             <br />
             <span className="inline-block w-16">śr:</span>14:00 - 20:00
             <br />
-            <span className="inline-block w-16">czw:</span>&ensp;9:00 - 20:00
+            <span className="inline-block w-16">czw:</span>&ensp;9:00 - 14:00
             <br />
-            <span className="inline-block w-16">pt:</span>&ensp;9:00 - 20:00
+            <span className="inline-block w-16">pt:</span>&ensp;9:00 - 14:00
             <br />
           </p>
         </div>
@@ -56,6 +54,7 @@ export default function Contact() {
             <li className="ml-6">księgowość</li>
             <li className="ml-6">płace</li>
             <li className="ml-6">kadry</li>
+            <li className="ml-6">ZUS</li>
           </ul>
         </div>
       </div>

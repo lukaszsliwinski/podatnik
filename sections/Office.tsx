@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 
 const images = [
-  '/office-photo-1.jpg',
-  '/office-photo-2.jpg',
-  '/office-photo-3.jpg',
-  '/office-photo-4.jpg'
+  '/office-photo-1.webp',
+  '/office-photo-2.webp',
+  '/office-photo-3.webp',
+  '/office-photo-4.webp'
 ];
 
 export default function Office() {
@@ -80,7 +80,7 @@ export default function Office() {
           </p>
         </motion.div>
         <motion.div
-          className="flex col-span-3 max-w-4xl w-full overflow-hidden mx-auto -my-10 sm:my-0 rounded-xl scale-y-60 sm:scale-y-70 md:scale-y-85 lg:scale-y-100"
+          className="flex col-span-3 max-w-4xl w-full overflow-hidden mx-auto sm:my-0 rounded-xl mb-8"
           onMouseLeave={() => setActivePhotoIdx(activePhotoIdx)}
           initial="hidden"
           animate={galleryControls}
@@ -135,9 +135,9 @@ export default function Office() {
             41-500 Chorzów
           </p>
           <p>
-            pn-śr: 14:00-20:00
+            wt-śr: 14:00-20:00
             <br />
-            czw-pt: 9:00-20:00
+            czw-pt: 9:00-14:00
           </p>
         </div>
       </div>

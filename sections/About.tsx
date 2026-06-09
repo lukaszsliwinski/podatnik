@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, easeOut } from 'framer-motion';
 import Image from 'next/image';
 
-import cert1 from '@/public/cert1.jpg';
-import cert2 from '@/public/cert2.jpg';
-import kibr from '@/public/kibr.jpg';
-import orly from '@/public/orly.png';
+import cert1 from '@/public/cert1.webp';
+import cert2 from '@/public/cert2.webp';
+import kibr from '@/public/kibr.webp';
+import orly from '@/public/orly.webp';
 
 import Counter from '@/components/Counter';
 import Header from '@/components/Header';
