@@ -1,4 +1,4 @@
-export default function Header({ text, underline = true }: { text: string; underline: boolean }) {
+export default function Header({ text, underline = true }: { text: string; underline?: boolean }) {
   return (
     <div className="w-fit">
       <h2 className="text-xl lg:text-2xl font-semibold">{text}</h2>
