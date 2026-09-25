@@ -96,7 +96,7 @@ export default function Offer() {
 
   return (
     <section className="flex justify-center items-center" id="offer">
-      <div className="grid sm:grid-cols-4 sm:gap-10 md:gap-20 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mt-12 sm:my-16 md:my-24">
+      <div className="grid sm:grid-cols-4 sm:gap-10 md:gap-20 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mt-24 sm:my-16 md:my-24">
         <motion.div
           ref={ref1}
           className="sm:col-span-3 my-4 ms:my-0"

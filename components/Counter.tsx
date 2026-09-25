@@ -38,8 +38,8 @@ export default function Counter({ number, text, animationTime }: ICounter) {
 
   return (
     <div ref={ref} className="flex flex-col items-center">
-      <h2 className="text-3xl xs:text-5xl lg:text-6xl font-bold mb-2">{total.toString()}</h2>
-      <p className="text-center text-xs lg:text-sm font-normal max-w-38 mx-1">{text}</p>
+      <div className="flex justify-center items-center text-3xl xs:text-5xl size-20 xs:size-26 mb-2 shadow-md rounded-full font-normal">{total.toString()}</div>
+      <p className="text-center text-xs lg:text-sm max-w-38 mx-1 font-semibold">{text}</p>
     </div>
   );
 }

@@ -15,16 +15,18 @@ export default function Rodo() {
 
   return (
     <section className="flex bg-light-bg py-12 -mx-6" id="rodo">
-      <div className="mx-auto py-4 sm:py-8 xl:py-10 px-6 sm:px-10 xl:px-20 w-[95vw] max-w-7xl bg-main-bg text-light-text rounded-xl shadow-xl">
-        <Header text="RODO - obowiązek informacyjny" />
+      <div className="mx-auto py-4 sm:py-8 xl:py-10 px-6 sm:px-10 xl:px-20 w-[95vw] max-w-7xl bg-main-bg text-light-text rounded-sm shadow-lg">
+        <Header text="RODO - obowiązek informacyjny" underline={false} />
         <div className="font-light">
           Informujemy, że:
           <ul className="list-inside space-y-1 mt-2">
             {rodoList.map((item, idx) => (
-              <li className="flex">
+              <li
+                key={idx}
+                className="flex"
+              >
                 <div className="w-8 px-2">{idx+1}.</div>
                 <div
-                  key={idx}
                   className="w-fit"
                   dangerouslySetInnerHTML={{ __html: item }}
                 />

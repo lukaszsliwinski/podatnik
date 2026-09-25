@@ -21,11 +21,11 @@ export default function Landing() {
   ];
 
   const sections = [
-    ['about', 'O mnie', ''],
-    ['office', 'Biuro', ''],
-    ['offer', 'Oferta', ''],
-    ['rodo', 'Rodo', 'mobile-hidden'],
-    ['contact', 'Kontakt', '']
+    ['about', 'O MNIE', ''],
+    ['office', 'BIURO', ''],
+    ['offer', 'OFERTA', ''],
+    ['rodo', 'RODO', 'mobile-hidden'],
+    ['contact', 'KONTAKT', '']
   ];
 
   const phrases = [
@@ -154,7 +154,7 @@ export default function Landing() {
       >
         <div className="bg-main text-light-text lg:max-w-4xl lg:text-base font-normal sm:h-24 lg:h-22 mx-auto shadow-lg flex flex-col lg:flex-row justify-between items-center">
           <div className="w-full lg:w-46 p-1 lg:p-2 bg-light-bg logo-container flex">
-            <div className="text-mid-text tracking-[0.2em] max-lg:text-[15px] max-lg:font-semibold lg:text-mid-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
+            <div className="text-dark-text tracking-[0.2em] max-lg:text-[15px] max-lg:font-semibold lg:text-dark-text/70 mx-auto lg:mx-0 lg:my-auto lg:ml-4">
               Biuro Rachunkowe Podatnik
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function Landing() {
               <li key={idx}>
                 <a
                   href={`#${section[0]}`}
-                  className={`${section[2] === 'mobile-hidden' ? 'hidden xs:inline-block' : 'inline-block'} mx-2 sm:mx-5 my-4 hover:text-hover-text text-lg sm:text-xl`}
+                  className={`${section[2] === 'mobile-hidden' ? 'hidden sm:inline-block' : 'inline-block'} mx-2 my-1.5 lg:my-4 p-1.5 xs:p-3 rounded-sm hover:shadow-sm text-sm sm:text-[17px] text-nowrap transition-all duration-300`}
                 >
                   {section[1]}
                 </a>
@@ -174,20 +174,21 @@ export default function Landing() {
         </div>
       </motion.nav>
       <motion.div
-        className="relative bg-cover bg-center bg-no-repeat bg-[url('../public/landing.webp')]"
+        className="relative bg-cover bg-right md:bg-center bg-no-repeat bg-[url('../public/landing.webp')] landing-edge"
         id="home"
         initial="hidden"
         animate={backgroundControls}
         variants={backgroundVariants}
       >
-        <div className="min-h-[55vh] flex flex-col justify-center items-center landing-gradient text-base lg:text-xl text-mid-text px-8 mt-20">
+        <div className="min-h-[80vh] flex flex-col justify-center items-center bg-dark-bg/75 text-base lg:text-lg text-light-text px-8">
           <motion.div
+            className="flex flex-col gap-8"
             initial="hidden"
             animate={phrasesControls}
             variants={phrasesContainerVariants}
           >
             {phrases.map((phrase, idx) => (
-              <motion.h2 key={idx} className="flex items-center mt-12" variants={phrasesVariants}>
+              <motion.h2 key={idx} className="flex items-center font-semibold" variants={phrasesVariants}>
                 <FontAwesomeIcon icon={faCheck} fixedWidth className="mr-3 text-main" size="lg" />
                 {phrase}
               </motion.h2>
@@ -196,21 +197,21 @@ export default function Landing() {
           <div className="flex">
             <motion.a
               href="#about"
-              className="mt-16 mx-2 bg-main text-light-text hover:rounded-xl shadow-lg px-6 py-3 transition-all"
+              className="mt-16 mx-2 text-base hover:bg-light-bg/7 border border-light-text rounded-e-sm px-4 py-2 transition-all"
               initial="hidden"
               animate={button1Controls}
               variants={buttonVariants}
             >
-              o mnie
+              O MNIE
             </motion.a>
             <motion.a
               href="#offer"
-              className="mt-16 mx-2 bg-main text-light-text hover:rounded-xl shadow-lg px-6 py-3 transition-all"
+              className="mt-16 mx-2 text-base hover:bg-light-bg/7 border border-light-text rounded-e-sm px-4 py-2 transition-all"
               initial="hidden"
               animate={button2Controls}
               variants={buttonVariants}
             >
-              oferta
+              OFERTA
             </motion.a>
           </div>
         </div>

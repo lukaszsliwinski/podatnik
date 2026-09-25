@@ -4,12 +4,11 @@
   --breakpoint-xs: 420px;
 
   --color-light-text: #fefefe;
-  --color-mid-text: #666;
-  --color-dark-text: #444;
+  --color-dark-text: #3b4147;
   --color-hover-text: #fefefeaa;
 
   --color-light-bg: #fefefe;
-  --color-dark-bg: #666;
+  --color-dark-bg: #3b4147;
   --color-main-bg: #1abc9c;
 
   --color-main: #f1c40f;
@@ -32,12 +31,6 @@ html {
 }
 
 /* landing background gradient */
-.landing-gradient {
-  background: var(--color-light-bg);
-  background: linear-gradient(
-    180deg,
-    rgba(254, 254, 254, 0.9) 0%,
-    rgba(254, 254, 254, 0.9) 50%,
-    rgba(254, 254, 254, 1) 100%
-  );
+.landing-edge {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
