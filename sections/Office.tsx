@@ -47,7 +47,7 @@ export default function Office() {
           galleryControls.start('visible');
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.15 }
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -61,7 +61,7 @@ export default function Office() {
     <section className="flex flex-col justify-center items-center" id="office">
       <div
         ref={ref}
-        className="lg:max-w-4xl mt-12 sm:my-16 md:my-24"
+        className="lg:max-w-4xl mt-26 mb-16 md:mb-24"
       >
         <motion.div
           className="col-span-2 order-1 xl:order-2 my-auto"
@@ -80,7 +80,7 @@ export default function Office() {
           </p>
         </motion.div>
         <motion.div
-          className="flex col-span-3 max-w-4xl w-full overflow-hidden mx-auto sm:my-0 rounded-xl mb-8"
+          className="flex col-span-3 max-w-4xl w-full overflow-hidden mx-auto sm:my-0 rounded-sm mb-8"
           onMouseLeave={() => setActivePhotoIdx(activePhotoIdx)}
           initial="hidden"
           animate={galleryControls}
@@ -111,7 +111,7 @@ export default function Office() {
         </motion.div>
       </div>
 
-      <div className="flex justify-around h-68 xs:h-96 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
+      <div className="flex justify-around h-68 xs:h-96 w-[95vw] max-w-7xl bg-main-bg rounded-sm shadow-lg">
         <div
           className="md:px-10 w-80 xs:w-sm sm:w-md lg:w-full flex justify-center items-center scroll-mt-24"
           id="adres"
@@ -128,16 +128,16 @@ export default function Office() {
           ></iframe>
         </div>
         <div className="hidden md:block w-px bg-light-bg my-8"></div>
-        <div className="hidden md:flex w-4/5 h-48 flex-col justify-around pl-10 lg:pl-18 my-auto text-light-text">
+        <div className="hidden md:flex w-4/5 h-48 flex-col justify-around pl-10 lg:pl-18 my-auto text-light-text text-base">
           <p>
             ul. Dąbrowskiego 58/6
             <br />
             41-500 Chorzów
           </p>
           <p>
-            wt-śr: 14:00-20:00
+            <span className="inline-block w-20">wt - śr:</span> <b>14:00 - 20:00</b>
             <br />
-            czw-pt: 9:00-14:00
+            <span className="inline-block w-20">czw - pt:</span> <b>9:00 - 14:00</b>
           </p>
         </div>
       </div>

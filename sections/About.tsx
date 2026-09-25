@@ -55,7 +55,7 @@ export default function About() {
           cert2Controls.start('visible');
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.15 }
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -69,10 +69,10 @@ export default function About() {
     <section className="flex flex-col justify-center items-center" id="about">
       <div
         ref={ref}
-        className="grid lg:grid-cols-2 sm:gap-y-8 mt-12 sm:my-16 md:my-24 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
+        className="grid lg:grid-cols-2 sm:gap-y-8 mt-26 mb-16 md:mb-24 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
       >
         <motion.div
-          className="my-auto"
+          className="my-auto bg-wh"
           initial="hidden"
           animate={textControls}
           variants={textVariants}
@@ -104,7 +104,7 @@ export default function About() {
         </motion.div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row justify-around h-56 md:h-48 lg:h-64 w-[95vw] max-w-7xl bg-main-bg rounded-xl shadow-xl">
+      <div className="flex flex-col-reverse md:flex-row justify-around h-64 md:h-48 lg:h-64 w-[95vw] max-w-7xl bg-main-bg rounded-sm shadow-lg">
         <div className="mx-auto md:w-full flex justify-around items-center px-4 xl:px-20">
           <a className="mx-2" href="https://www.kibr.pl/" target="_blank" rel="noopener noreferrer">
             <Image className="h-16 md:h-24 lg:h-28 w-auto" src={kibr} alt="kibr" />
@@ -120,8 +120,8 @@ export default function About() {
         </div>
         <div className="hidden md:block w-px bg-light-bg my-8"></div>
         <div className="xs:w-sm sm:w-xl mx-auto md:w-full flex justify-around items-center px-4 xl:px-20 text-light-text">
-          <Counter number={35} text={'lat doświadczenia'} animationTime={1500} />
-          <Counter number={120} text={'zadowolonych klientów'} animationTime={1500} />
+          <Counter number={35} text={'LAT DOŚWIADCZENIA'} animationTime={1500} />
+          <Counter number={120} text={'ZADOWOLONYCH KLIENTÓW'} animationTime={1500} />
         </div>
       </div>
     </section>
