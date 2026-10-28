@@ -180,7 +180,7 @@ export default function Landing() {
         animate={backgroundControls}
         variants={backgroundVariants}
       >
-        <div className="min-h-[80vh] flex flex-col justify-center items-center bg-dark-bg/75 text-base lg:text-lg text-light-text px-8">
+        <div className="min-h-[80vh] flex flex-col justify-center items-center bg-dark-bg/85 text-base lg:text-lg text-light-text px-8">
           <motion.div
             className="flex flex-col gap-8"
             initial="hidden"
@@ -197,7 +197,7 @@ export default function Landing() {
           <div className="flex">
             <motion.a
               href="#about"
-              className="mt-16 mx-2 text-base hover:bg-light-bg/7 border border-light-text rounded-e-sm px-4 py-2 transition-all"
+              className="mt-16 mx-2 text-base hover:bg-light-bg/7 border border-light-text rounded-sm px-4 py-2 transition-all"
               initial="hidden"
               animate={button1Controls}
               variants={buttonVariants}
@@ -206,7 +206,7 @@ export default function Landing() {
             </motion.a>
             <motion.a
               href="#offer"
-              className="mt-16 mx-2 text-base hover:bg-light-bg/7 border border-light-text rounded-e-sm px-4 py-2 transition-all"
+              className="mt-16 mx-2 text-base hover:bg-light-bg/7 border border-light-text rounded-sm px-4 py-2 transition-all"
               initial="hidden"
               animate={button2Controls}
               variants={buttonVariants}

@@ -6,8 +6,8 @@ export interface ICounter {
   animationTime: number;
 }
 
-export interface IList {
-  header: string;
+export interface IOfferItem {
+  header?: string;
   items: string[];
 }
 
