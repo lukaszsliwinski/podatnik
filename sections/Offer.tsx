@@ -40,7 +40,7 @@ const offers: IOfferItem[] = [
       'pełna obsługa kadr i płac',
       'pełna obsługa ZUS',
       'pomoc w założeniu działalności gospodarczej',
-      'pomoc w sporządzeniu wniosków o dotację na rozpoczęcie działalności gospodarczej'
+      'pomoc w sporządzeniu wniosków o dotację na rozpoczęcie działalności gospodarczej'
     ]
   }
 ];
