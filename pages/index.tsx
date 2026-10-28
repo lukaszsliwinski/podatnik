@@ -16,7 +16,7 @@ const quicksand = Quicksand({
 export default function Home() {
   return (
     <div
-      className={`${quicksand.className} bg-light-bg text-dark-text font-[family-name:var(--font-quicksand)] tracking-wider leading-6.5 font-light max-sm:text-xs/5 text-sm`}
+      className={`${quicksand.className} bg-light-bg text-dark-text font-[family-name:var(--font-quicksand)] tracking-wider leading-6.5 font-light max-sm:text-xs/5 text-[15px]`}
     >
       <Landing />
       <main className="w-screen overflow-x-hidden px-3 xs:px-6 md:px-12 lg:px-0">

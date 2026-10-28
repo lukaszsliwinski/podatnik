@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import moment from 'moment';
 import { motion, useAnimation, easeOut } from 'framer-motion';
 import Image from 'next/image';
 
@@ -17,6 +18,8 @@ export default function About() {
   const textControls = useAnimation();
   const cert1Controls = useAnimation();
   const cert2Controls = useAnimation();
+
+  const years = moment().year() - 2010;
 
   // motion variants
   const textVariants = {
@@ -81,7 +84,7 @@ export default function About() {
           <p className="text-justify font-light">
             Nazywam się <span className="font-semibold">Wieńczysława Śliwińska</span> i&nbsp;od wielu lat specjalizuję się w&nbsp;kompleksowej obsłudze księgowej firm - niezależnie od ich branży czy formy działalności. Posiadam <span className="font-semibold">certyfikat księgowy Ministerstwa Finansów</span> (nr 43037/2010), dyplom Akademii Ekonomicznej w&nbsp;Katowicach oraz ponad 20&nbsp;lat doświadczenia na stanowisku Głównej Księgowej. Jestem członkiem założycielem <span className="font-semibold">Krajowej Izby Biur Rachunkowych</span> oraz członkiem <span className="font-semibold">Stowarzyszenia Księgowych w&nbsp;Polsce</span>, oddział w&nbsp;Katowicach. Regularnie poszerzam wiedzę, uczestnicząc w&nbsp;specjalistycznych szkoleniach i&nbsp;na bieżąco śledząc zmiany w&nbsp;przepisach.
             <br /><br />
-            Od ponad 15&nbsp;lat prowadzę <span className="font-semibold">Biuro Rachunkowe „Podatnik”</span> w&nbsp;Chorzowie, gdzie z&nbsp;pełnym zaangażowaniem wspieram przedsiębiorców w&nbsp;bezpiecznym, zgodnym z&nbsp;przepisami i&nbsp;efektywnym prowadzeniu ich finansów. Księgowość to dla mnie nie tylko zawód, ale także pasja i&nbsp;realny sposób, by pomagać firmom rosnąć, podejmować świadome decyzje i&nbsp;działać spokojnie w&nbsp;dynamicznie zmieniającym się otoczeniu prawnym. Moim priorytetem jest odciążenie klientów z&nbsp;obowiązków księgowych, aby mogli skupić się na tym, co najważniejsze — rozwoju swojej działalności.
+            Od {years}&nbsp;lat prowadzę <span className="font-semibold">Biuro Rachunkowe „Podatnik”</span> w&nbsp;Chorzowie, gdzie z&nbsp;pełnym zaangażowaniem wspieram przedsiębiorców w&nbsp;bezpiecznym, zgodnym z&nbsp;przepisami i&nbsp;efektywnym prowadzeniu ich finansów. Księgowość to dla mnie nie tylko zawód, ale także pasja i&nbsp;realny sposób, by pomagać firmom rosnąć, podejmować świadome decyzje i&nbsp;działać spokojnie w&nbsp;dynamicznie zmieniającym się otoczeniu prawnym. Moim priorytetem jest odciążenie klientów z&nbsp;obowiązków księgowych, aby mogli skupić się na tym, co najważniejsze — rozwoju swojej działalności.
             <br /><br />
             Zapraszam do współpracy firmy poszukujące solidnego wsparcia księgowego opartego na profesjonalizmie i&nbsp;zaangażowaniu.
           </p>
